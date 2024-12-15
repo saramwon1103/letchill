@@ -1,0 +1,941 @@
+body {
+    background-image: url('/MVC/View/img/image-bg.png');
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0 auto; /* Loại bỏ margin mặc định */
+    width: 1440px; /* Chiếm toàn bộ chiều rộng màn hình */
+    height: 860px; /* Điều chỉnh tự động theo nội dung */
+    font-family: 'Inter', sans-serif;
+}
+.head-bar {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1); ;
+    border-width: 1px;
+    border-style: solid ;
+    border-radius: 24px;
+    box-sizing: border-box;
+    width: 1150px;
+    height: 65px;
+    margin: 24px auto; /* Căn giữa div theo chiều ngang */
+    padding: 10px 55px;
+    align-items: center; /*Căn element giữa theo chiều ngang*/
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước tổng thể của div */
+}
+#home-icon {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.25);
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 50%; /* Tạo hình tròn */
+    margin-right: 16px;
+    font-size: 20px;
+}
+#home-icon:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: black;
+    border-radius: 50%; /* Tạo hình tròn */
+}
+.head-bar img {
+    margin-right: 116.4px; /* Khoảng cách giữa logo và nút home */
+}
+.timkiem-bar {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.1); ;
+    border-width: 1px;
+    border-style: solid ;
+    border-radius: 24px;
+    width: 340px;
+    height: 44px;
+    font-size: 20px;
+    margin-top: 2.7906976744186046511627906976744 vh;
+    padding: 9px 10px;
+    align-items: center; /*Căn element giữa theo chiều ngang*/
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước tổng thể của div */
+    margin-right: 16px;
+}
+#search-icon {
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    margin-right: 5px;
+    font-size: 20px;
+}
+#micro-icon {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.25);
+    text-align: center;
+    padding: 10px 13px;
+    border-radius: 50%; /* Tạo hình tròn */
+    margin-right: 116.4px;
+    font-size: 20px;
+}
+#micro-icon:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: black;
+    border-radius: 50%; /* Tạo hình tròn */
+}
+#bell-icon {
+    color: white;
+    text-align: center;
+    padding: 10px 13px;
+    border-radius: 50%; /* Tạo hình tròn */
+    margin-right: 20px;
+    font-size: 20px;
+}
+#bell-icon:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: black;
+    border-radius: 50%; /* Tạo hình tròn */
+}
+#user-icon {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.25); 
+    text-align: center;
+    padding: 10px 13px;
+    border-radius: 50%; /* Tạo hình tròn */
+    margin-right: 16px;
+    font-size: 20px;
+}
+#user-icon:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: black;
+    border-radius: 50%; /* Tạo hình tròn */
+}
+#logout-button {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    width: 100px;
+    height: 33px;
+    padding: 0px 0px;
+    border: none;
+    font-family: 'Inter', sans-serif; /* Áp dụng font Inter */
+    font-weight: 600; /* Đặt trọng lượng là Semi Bold */
+    font-size: 16;
+    border-radius: 8px;
+}
+#logout-button:hover {
+    color: whitesmoke; /* Đổi màu chữ khi hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Nền nhẹ khi hover */
+}
+.head-bar input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 16px;
+    width: 300px;
+    padding-right: 10px;
+    color: white;
+}
+
+.main {
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 29px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1380px;
+    display: flex;
+}
+#library {
+    box-sizing: border-box;
+    width: 330px;
+    height: 630px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.15);
+    padding: 24px 24px;
+}
+#library-icon {
+    color: white;
+    font-size: 26px;
+    margin-right: 20px;
+}
+#library-text {
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif; /* Áp dụng font Inter */
+    font-weight: 650;
+    margin-right: 97px;
+}
+#plus-button {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+}
+#plus-button:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+#playlist-button, #artist-button {
+    color: white;
+    border-radius: 26px;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 91px;
+    height: 32px;
+    margin-right: 20px;
+    margin-top: 28px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif; /* Áp dụng font Inter */
+    font-weight: 500;
+}
+#playlist-button:hover, #artist-button:hover {
+    color: black;   
+}
+#list-scroll {
+    margin-top: 40px;
+    width: 107%;
+    height: 456px;
+    overflow-y: scroll;
+}
+
+/* Cơ bản cho tất cả playlist */
+#list-scroll div {
+    height: 84px;
+    width: 255px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 12px; /* Thêm bo tròn cho toàn div */
+    transition: background-color 0.3s ease; /* Tạo hiệu ứng mượt */
+}
+
+/* Hiệu ứng hover cho các playlist */
+#list-scroll div:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Nền sáng lên khi hover */
+}
+
+/* Cấu hình icon */
+#list-scroll div img, 
+#list-scroll div i {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px; /* Đảm bảo bo góc */
+    margin-right: 20px;
+    transition: transform 0.3s ease; /* Hiệu ứng khi hover icon */
+}
+
+#list-scroll div:hover img, 
+#list-scroll div:hover i {
+    transform: scale(1.1); /* Tăng kích thước icon khi hover */
+}
+
+/* Văn bản trong playlist */
+#list-scroll div span {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+/* Màu sắc cho phần chữ nhỏ hơn */
+#list-scroll div span #playlist-text {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 450;
+    margin-top: 4px;
+}
+
+#list-scroll div {
+    margin-bottom: 20px;
+}
+#list-scroll::-webkit-scrollbar {
+    width: 8px; /* Độ rộng của scrollbar */
+}
+
+#list-scroll::-webkit-scrollbar-track {
+    background: transparent; /* Nền của khung cuộn */
+}
+
+#list-scroll::-webkit-scrollbar-thumb {
+    background-color: #1DB954; /* Màu của thanh cuộn */
+    border-radius: 10px; /* Làm tròn góc */
+    border: 2px solid transparent; /* Để thanh cuộn không có viền nổi bật */
+}
+
+/* Custom scrollbar for Firefox */
+#list-scroll {
+    scrollbar-width: thin; /* Thanh cuộn nhỏ */
+    scrollbar-color: #1DB954 transparent; /* Màu của thanh cuộn và khung */
+}
+#danhsachyeuthich {
+    width: 249px;
+    display: flex;
+    cursor: pointer;
+}
+#heart-icon {
+    width: 72px;
+    height: 72px;
+    font-size: 24.62px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(69.93deg, #296265 1.75%, #344A5C 34.18%, #3F2F52 62.3%, #471C4B 88.25%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+#heart-icon i {
+    font-size: 24px; /* Đảm bảo kích thước hợp lý */
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 17px;
+}
+#danhsachyeuthich-text {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+#playlist-text {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 450;
+    margin-top: 4px;
+}
+#chillingwithheart {
+    width: 249px;
+    display: flex;
+    cursor: pointer;
+}
+#chillingwithheart img {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+#chillingwithheart-text {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+#ArianaGrande {
+    width: 249px;
+    display: flex;
+    cursor: pointer;
+}
+#ArianaGrande img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+#ArianaGrande-text {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+#healingcucmanh {
+    width: 249px;
+    display: flex;
+    cursor: pointer;
+}
+#healingcucmanh img {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+#healingcucmanh-text {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+#nhaccuaTrang {
+    width: 249px;
+    display: flex;
+    cursor: pointer;
+}
+#nhaccuaTrang img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+#nhaccuaTrang-text {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+/*Xử lý các gói dịch vụ*/
+.pack{
+    box-sizing: border-box;
+    width: 650px;
+    height: 629px;
+    background-size: cover;
+    margin-left: 20px;
+    margin-right: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: url('/public/assets/img/img_bg_1.png');
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.15);
+    padding: 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y:scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 transparent;
+}
+
+.container-1 {
+    width: 400px; 
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.benefit-items {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.benefit-items p {
+    font-size: 16px;
+    font-weight: 350;
+}
+
+.mini, .individual, .student {
+    color: white;
+    width: 280px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 27px 17px 27px 17px;
+    margin-bottom: 20px;
+}
+
+.pre {
+    font-size: 20px;
+}
+
+.type {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 4px;
+}
+
+.buy {
+    align-self: center;
+    margin-top: auto;
+    width: 260px;
+    height: 46px;
+    border-radius: 39px;
+    background-color: #296265;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 72px auto;
+}
+
+.buy:hover {
+    background-color: #1DB954; /* Đổi màu khi hover */
+    transform: scale(1.05);
+}
+#play {
+    position: relative; /* Đặt vị trí cho div cha */
+    display: flex;
+    margin-top: 24px;
+    width: 100%px;
+    height: 64px;
+}
+#circle #playbutton {
+    font-size: 40px;
+    color: white;
+}
+#circle {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    background-color: #296265;
+    border-radius: 50%; /* Tạo hình tròn */
+    align-items: center;
+    justify-content: center;
+    margin-right: 47px;
+    outline: none;
+    border: none;
+    padding-left: 11px;
+}
+#circle #playbutton:hover {
+    color: rgba(255, 255, 255, 0.5);;
+    cursor: pointer;
+}
+#threedots i {
+    color: white;
+    font-size: 30px;
+}
+#threedots {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center; /*căn giữa theo phương dọc*/
+    margin-right: 47px;
+}
+#threedots i:hover {
+    color: rgba(255, 255, 255, 0.25);;
+    cursor: pointer;
+}
+#follow-button {
+    width: 152px;
+    height: 46px;
+    background-color: transparent;
+    border: white solid 2px;
+    border-radius: 28px;
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    align-self: center;
+}
+#follow-button:hover {
+    color: rgba(255, 255, 255, 0.5);
+    border: rgba(255, 255, 255, 0.5) solid 2px;
+    cursor: pointer;
+}
+#threebars i {
+    color: white;
+    font-size: 30px;
+}
+#threebars {
+    position: absolute; /* Đặt vị trí cho div con */
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center; /*căn giữa theo phương dọc*/
+    right: 0;
+}
+#threebars i:hover {
+    color: rgba(255, 255, 255, 0.25);;
+    cursor: pointer;
+}
+#fot {
+    width: 1440px;
+    height: 92px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+#f-img-song {
+    border-radius: 50%;
+    height: 60px;
+}
+#mini-song {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+#mini-name {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-left: 18px;
+}
+#mini-author {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 450;
+    margin-top: 4px;
+}
+#mini-plus {
+    color:white;
+    margin-left: 18px;
+    font-size: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+#mini-plus:hover {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+#control {
+    justify-content: center;
+    position: absolute;
+    left: 50%; /* Căn giữa theo chiều ngang bằng 50% của phần tử cha */
+    transform: translateX(-50%); /* Đẩy lại một nửa chiều rộng của chính nó để đảm bảo ở giữa */
+}
+#audio-player {
+    margin-top: 14px;
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+}
+#audio-player button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+#audio-player button:hover {
+    transform: scale(1.15);
+}
+#progress {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 4px;
+    height: 24px;
+    width: 100%;
+}
+#current-time {
+    color: white;
+    font-size: 16px;
+    font-style:normal;
+    margin-right: 14px;
+}
+#total-time {
+    color: white;
+    font-size: 16px;
+    font-style:normal;
+    margin-left: 14px;
+}
+#progress-slider {
+    -webkit-appearance: none;
+    margin-right: 14px;
+    width: 437px;
+    height: 5px;
+    background: linear-gradient(90deg, #1DB954 50%, #ddd 50%);
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease-in;
+}
+
+/* Custom thumb styling */
+#progress-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0px;
+    height: 0px;
+    background: #1DB954;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Remove the outline when focused */
+#progress-slider:focus {
+    outline: none;
+}
+
+/* Dynamic background for Webkit browsers */
+#progress-slider::-webkit-slider-runnable-track {
+    background: linear-gradient(90deg, #1DB954 var(--value), #ddd var(--value));
+    border-radius: 5px;
+}
+#info-volume {
+    display: flex;
+    width: auto;
+    height: 20px;
+    margin-left: 850px;
+    align-items: center;
+}
+#volume {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #1DB954 50%, #ddd 50%);
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease-in;
+}
+
+/* Custom thumb styling */
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0px;
+    height: 0px;
+    background: #1DB954;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Remove the outline when focused */
+#volume:focus {
+    outline: none;
+}
+
+/* Dynamic background for Webkit browsers */
+#volume::-webkit-slider-runnable-track {
+    background: linear-gradient(90deg, #1DB954 var(--value), #ddd var(--value));
+    border-radius: 5px;
+}
+#volume {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, #1DB954 50%, #ddd 50%);
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease-in;
+}
+
+/* Custom thumb styling */
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0px;
+    height: 0px;
+    background: #1DB954;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Remove the outline when focused */
+#volume:focus {
+    outline: none;
+}
+
+/* Dynamic background for Webkit browsers */
+#volume::-webkit-slider-runnable-track {
+    background: linear-gradient(90deg, #1DB954 var(--value), #ddd var(--value));
+    border-radius: 5px;
+}
+#info {
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-right: 30px;
+}
+#info:hover svg path {
+    fill: rgba(255, 255, 255, 0.5)
+}
+#custom-rate {
+    color: #296265;
+    font-size: 16px;
+}
+#custom-rate input {
+    display: none;
+}
+#custom-rate input + label {
+    cursor: pointer;
+    text-shadow: 1px 1px #296265;
+}
+#custom-rate input:checked  + label ~ label {
+    color: white;
+}
+#info-div {
+box-sizing: border-box;
+overflow-y: auto;
+overflow-x: hidden;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 24px 25px;
+gap: 16px;
+
+width: 330px;
+height: 630px;
+
+background: rgba(255, 255, 255, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.15);
+border-radius: 20px 10px 10px 20px;
+}
+
+#info-div::-webkit-scrollbar {
+    width: 5px;
+    scroll-margin: 3px 5px;
+}
+#info-div::-webkit-scrollbar-thumb {
+    background-color: #1DB954;
+    border-radius: 10px;
+}
+#info-div::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+#info-plus {
+    position: absolute;
+    margin-left: 209px;
+    background: transparent;
+    color: white;
+    outline: none;
+    border: none;
+}
+#info-2icon {
+    display: flex;
+    position:relative;
+    box-sizing: border-box;
+    width: 281px;
+    height: 26px;
+    align-items: center;
+}
+#info-exit {
+    position: absolute;
+    right: 0px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: transparent;
+}
+#info-plus:hover svg path, #info-exit:hover svg path {
+    fill: rgba(255, 255, 255, 0.5);
+}
+#info-plus:hover , #info-exit:hover {
+    cursor: pointer;
+}
+#infodiv-song img {
+    width: 281px;
+    height: 281px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#info-namesong {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+#info-authorsong {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+#custom-rate {
+    box-sizing: border-box;
+    width: 281px;
+    height: 136px;
+    border-radius: 10px;
+    background: black;
+    padding: 12px 16px;
+    margin-top: 20px;
+}
+#rate-danhgia, #rate-tatca {
+    color: white;
+    font-size: 18px;
+    font-weight: 500px;
+}
+#rate-tatca {
+    margin-left: 115px;
+    cursor: pointer;
+}
+#custom-name{
+    color: white;
+    font-size: 18px;
+    font-weight: 400px;
+}
+#rate-comment {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 400;
+}
+#info-artist-follow {
+    margin-top: 20px;
+    width: 281px;
+    height: 216x;
+    display: flex;
+    flex-direction: column;
+}
+#info-artist-follow-img {
+    background-image: url('/MVC/View/img/artist6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 281px;
+    height: 160px;
+    border-radius: 10px;
+    display: flex;
+}
+#info-artist-follow-img span {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 8px 16px;
+}
+#info-artist-follow-title {
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#info-artist-follow-title span {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+#info-artist-follow-title button {
+    height: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    width: 99px;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 26px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400px;
+}
+#info-artist-follow-title button:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}

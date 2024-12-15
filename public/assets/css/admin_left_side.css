@@ -1,0 +1,131 @@
+/* CSS để tạo kiểu cho menu bên trái */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+}
+
+.left-li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;  /* Điều chỉnh từ absolute thành relative để linh hoạt hơn */
+    width: 329px;
+    height: auto;  /* Chiều cao tự động để dễ dàng thay đổi khi thu nhỏ */
+    left: 26px;
+    top: 118px;
+    flex-wrap: wrap;  /* Cho phép các phần tử nằm dưới nhau khi thu nhỏ */
+}
+
+
+.menu-items{
+    
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px 20px 20px 10px;
+    gap: 5px;
+}
+
+.left-menu {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    height: 74px;
+    box-sizing: border-box;
+    display: inline-flex; /* Đặt các phần tử con (icon và chữ) nằm ngang */
+    justify-content: center;
+    align-items: center;
+    width: 329px;
+}
+
+.menu-items:hover {
+    background-color: #444;
+}
+
+/* Đảm bảo rằng submenu sẽ bị ẩn mặc định */
+.left-submenu {
+    list-style-type: none;
+    padding-left: 60px;
+    margin: 0;
+    padding-bottom:15px;
+    gap: 10px;
+    margin-top: -10px;
+}
+
+.left-submenu li {
+    padding: 5px;
+}
+
+.left-submenu li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+}
+
+.left-submenu li a:hover {
+    color: #e321f4;
+}
+
+iconify-icon {
+    font-size: 20px;
+}
+
+/* Điều chỉnh trên tablet */
+@media (max-width: 768px) {
+    .left-li {
+        width: 140px; /* Giảm chiều rộng */
+        left: 5px;
+    }
+
+    .left-menu {
+        width: 160px; /* Giảm chiều rộng */
+        font-size: 16px;
+        height: 50px;
+        padding: 0 5px;
+        gap: 5px;
+    }
+
+    .left-submenu {
+        padding-left: 0px;
+        gap: 5px;
+    }
+    .left-submenu li a {
+        font-size: 14px;
+        gap: 10px;
+    }
+}
+
+/* Điều chỉnh trên điện thoại */
+@media (max-width: 480px) {
+    .left-li {
+        width: 80px; /* Giảm chiều rộng */
+        left: 8px;
+    }
+
+    .left-menu {
+        width: 70px; /* Giảm chiều rộng */
+        font-size: 12px;
+        height: 40px;
+        padding: 3px 8px;
+        gap: 8px;
+    }
+
+    .left-submenu {
+        padding-left: 10px;
+        gap: 8px;
+    }
+    .left-submenu li a {
+        font-size: 0px;
+        gap: 0px;
+        padding-left: 8px;
+    }
+}
+

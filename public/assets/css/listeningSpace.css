@@ -1,0 +1,330 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter-Medium.otf') format('opentype');
+    font-style: normal;
+}
+
+* {
+    
+    font-family: "Inter", "Times New Roman";
+    color: #fff
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+div, p, iconify-icon, span {
+    background-color: transparent;
+}
+
+button {
+    background-color: transparent;
+    list-style: none;
+    box-shadow: none;
+    border: none;
+}
+
+.icon-active { 
+    color: #296265;
+}
+
+/* ---------------------------------------- */
+/* Information */
+.listeningSpace .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 18px;
+}
+
+.listeningSpace .info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    margin-left: 30px;
+}
+
+.listeningSpace .infoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+
+    margin: 0 auto;
+    width: auto;
+    height: 48px;
+    
+    flex: none;
+    flex-grow: 0;
+}
+
+.listeningSpace .infoText .name,
+.listeningSpace .infoText .author{
+    font-size: 16px;
+    height: fit-content;
+    margin: 0 0;
+
+}
+
+.listeningSpace .addToPlaylist iconify-icon {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Music Player */
+
+.listeningSpace .musicPlayer .controlbar iconify-icon {
+    font-size: 26px;
+}
+
+.listeningSpace .musicPlayer .controlbar #mainControlBtn iconify-icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listeningSpace .musicPlayer .controlbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    width: fit-content;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.listeningSpace .progressContainer {
+    width: 100%;
+    height: 5px;
+    background-color: #296265;
+    border-radius: 5px;
+    margin: 8px 0;
+    position: relative;
+}
+
+.listeningSpace .progress {
+    background: #ffffff;
+    height: 100%;
+    width: auto;
+    border-radius: 5px;
+}
+
+.listeningSpace .timeDisplay {
+    display: flex;
+    justify-content: space-between;
+    width: 534px;
+    min-width: 240px;
+    gap: 14px;
+}
+
+.listeningSpace .musicPlayer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    gap: 4px;
+}
+
+/* General space */
+.listeningSpace .general iconify-icon {
+    font-size: 20px;
+}
+
+.listeningSpace .volumnContainer {
+    width: 100%;
+    height: 4px;
+    background: #296265;
+    border-radius: 5px;
+    position: relative;
+}
+
+.listeningSpace .general .volumnSpace {
+    display: flex;
+    flex-direction: row;
+    width: 160px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    
+}
+
+.listeningSpace .general {
+    display: flex;
+    margin: auto;
+    margin-right: 30px;
+    gap: 28px;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+    .listeningSpace .info img {
+        width: 50px;
+        height: 50px;
+        margin-left: 8px;
+    }
+
+    .listeningSpace .infoText .name,
+    .listeningSpace .infoText .author {
+        font-size: 14px;
+    }
+
+    .listeningSpace .musicPlayer .controlbar {
+        gap: 5px;
+    }
+
+    .listeningSpace .general {
+        gap: 5px;
+    }
+
+    .listeningSpace .general .volumnSpace {
+        width: 120px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .listeningSpace .info img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .listeningSpace .infoText .name,
+    .listeningSpace .infoText .author {
+        font-size: 15px;
+    }
+
+    .listeningSpace .musicPlayer .controlbar {
+        gap: 16px;
+    }
+
+    .listeningSpace .general {
+        gap: 16px;
+    }
+
+    .listeningSpace .general .volumnSpace {
+        width: 140px;
+    }
+}
+
+@media (min-width: 769px) {
+    .listeningSpace .info img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .listeningSpace .musicPlayer .controlbar {
+        gap: 24px;
+    }
+
+    .listeningSpace .general .volumnSpace {
+        width: 160px;
+    }
+}
+
+/*Kích thước mobile*/
+@media (max-width: 400px) {
+    .listeningSpace {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        gap: 10px;
+        background-color: #000; /* Tùy chọn: nền đen */
+    }
+
+    /* Ẩn phần thông tin tên bài hát và tác giả */
+    .listeningSpace .infoText, .addToPlaylist {
+        display: none;
+    }
+
+    /* Ảnh bài hát hình tròn */
+    .listeningSpace .info img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%; /* Hình tròn */
+        margin: 0;
+    }
+
+    /* Controller điều khiển bài hát */
+    .listeningSpace .musicPlayer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        flex: 1; /* Co dãn chiếm không gian giữa */
+    }
+
+    .listeningSpace .musicPlayer .controlbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Khoảng cách giữa các nút */
+    }
+
+    .listeningSpace .musicPlayer .controlbar iconify-icon {
+        font-size: 20px;
+    }
+
+    .listeningSpace .musicPlayer .controlbar #mainControlBtn iconify-icon {
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+        color: #000;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Thanh "timeDisplay" nằm dưới controller */
+    .listeningSpace .timeDisplay {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* Chiều rộng toàn bộ */
+        font-size: 12px; /* Chữ nhỏ hơn */
+    }
+
+    /* Nút "info" và thanh âm lượng ở bên phải */
+    .listeningSpace .general {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .listeningSpace .general .volumnSpace {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 80px;
+    }
+
+    .listeningSpace .volumnContainer {
+        height: 3px;
+        width: 60px;
+    }
+
+    .listeningSpace .general iconify-icon {
+        font-size: 18px;
+    }
+}

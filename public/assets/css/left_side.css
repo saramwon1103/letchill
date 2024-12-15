@@ -1,0 +1,400 @@
+
+#library {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 330px;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.15);
+    padding: 24px 24px;
+}
+#library-icon {
+    color: white;
+    font-size: 26px;
+    margin-right: 20px;
+}
+#library-text {
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif; /* Áp dụng font Inter */
+    font-weight: 650;
+    margin-right: 97px;
+}
+#plus-button {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+}
+#plus-button:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+#playlist-button, #artist-button {
+    color: white;
+    border-radius: 26px;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 91px;
+    height: 32px;
+    margin-right: 20px;
+    margin-top: 28px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif; /* Áp dụng font Inter */
+    font-weight: 500;
+}
+#playlist-button:hover, #artist-button:hover {
+    color: black;   
+}
+#list-scroll {
+    margin-top: 40px;
+    width: 107%;
+    height: 100%;
+    overflow-y: scroll;
+
+    scrollbar-width: thin; /* Thanh cuộn nhỏ */
+    scrollbar-color: transparent transparent; /* Màu của thanh cuộn và khung */
+}
+
+#list-scroll a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Cơ bản cho tất cả playlist */
+#list-scroll div {
+    height: 84px;
+    width: 255px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 12px; /* Thêm bo tròn cho toàn div */
+    transition: background-color 0.3s ease; /* Tạo hiệu ứng mượt */
+}
+
+/* Hiệu ứng hover cho các playlist */
+#list-scroll div:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Nền sáng lên khi hover */
+}
+
+/* Cấu hình icon */
+#list-scroll div img, 
+#list-scroll div i {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px; /* Đảm bảo bo góc */
+    margin-right: 20px;
+    transition: transform 0.3s ease; /* Hiệu ứng khi hover icon */
+}
+
+#list-scroll div:hover img, 
+#list-scroll div:hover i {
+    transform: scale(1.1); /* Tăng kích thước icon khi hover */
+}
+
+/* Văn bản trong playlist */
+#list-scroll div span {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+/* Màu sắc cho phần chữ nhỏ hơn */
+#list-scroll div span #playlist-text {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 450;
+    margin-top: 4px;
+}
+
+#list-scroll div {
+    margin-bottom: 20px;
+}
+
+/*Form thêm bài hát*/
+#create-newlist {
+    position: absolute;
+    background-color: #000000;
+    box-sizing: border-box;
+    width: 440px;
+    height: 674px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -53%) scale(0.76);
+    font-size: 20px;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    z-index: 1000;
+
+    transition: display 0.5s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+#create-newlist #return {
+    height: 50.74px;
+    width: 50.74px;
+    margin-left: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+
+#create-newlist #lbl-create {
+
+    width: 221px;
+    height: 26px;
+    left: calc(50% - 221px/2 + 0.5px);
+    top: 103px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 110%;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Inter', 'extra bold';
+    font-size: 24px;
+}
+
+#create-newlist #name-list {
+    display: block;
+    width: 325px;
+    height: 74.75px;
+    margin: 25px auto;
+    gap: 6px;
+    font-family: 'inter', 'extra bold';
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+input[name=name-list] {
+
+    box-sizing: border-box;
+    padding: 17px 20px;
+    width: 325px;
+    height: 56px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+}
+
+#create-newlist #scription {
+    width: 324px;
+    height: 190px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'inter', 'extra bold';
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+textarea[name=scription] {
+    box-sizing: border-box;
+    width: 324px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    padding: 17px;
+    resize: none; /* Loại bỏ khả năng thay đổi kích thước */
+    overflow-wrap: break-word; /* Cho phép văn bản tự động xuống dòng */
+    word-wrap: break-word; /* Hỗ trợ trình duyệt cũ */
+    text-align: left; /* Căn văn bản sang trái */
+    vertical-align: top; /* Căn văn bản theo chiều dọc */
+    line-height: 1.4; /* Khoảng cách giữa các dòng */
+    font-family: 'Inter', sans-serif;
+}
+
+
+#choose-image {
+    display: flex;
+    background-color: transparent;
+    border: transparent !important;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 103px;
+    height: 103px;
+    cursor: pointer;
+    align-items: center; /* Căn giữa nội dung theo trục dọc */
+    justify-content: center; /* Căn giữa nội dung theo trục ngang */
+    overflow: hidden; /* Ẩn các phần thừa của ảnh */
+}
+#choose-image img {
+    box-sizing: border-box;
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+input[type=submit] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 24px;
+    gap: 10px;
+
+    width: 77px;
+    height: 36px;
+    left: 305px;
+    top: 598px;
+
+    background: #296265;
+    border-radius: 5px;
+
+    margin-right: 56px;
+    margin-left: auto;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+#them-bh-playlist {
+    position: absolute;
+    background-color: #000000;
+    box-sizing: border-box;
+    width: 440px;
+    height: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    z-index: 1000;
+
+    transition: display 0.5s ease; /* Thêm hiệu ứng chuyển động */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 110%;
+    align-items: center;
+
+    color: #FFFFFF;
+
+}
+
+#them-bh-playlist #return {
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    margin-left: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+#them-ten-bh {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #FFFFFF;
+    gap: 20px;
+}
+input[name=tenbh] {
+    box-sizing: border-box;
+    padding: 17px 20px;
+    width: 325px;
+    height: 56px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+}
+#form-them-bh input[type=submit] {
+    width: 100px;
+    margin: 28px 0 0 auto;
+}
+
+
+@media (max-width: 768px) {
+    #listsong {
+        height: auto;
+    }
+    #songs {
+        height: 314px;
+    }
+    #list-scroll {
+        height: 680px;
+    }
+    #library {
+        width: 134px;
+        height: auto;
+    }
+    #library-text, #type-playlist {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #listsong {
+        height: auto;
+    }
+    #songs {
+        height: 314px;
+    }
+    #list-scroll {
+        height: 680px;
+    }
+    #library {
+        width: 134px;
+        height: auto;
+    }
+    #library-text, #type-playlist {
+        display: none;
+    }
+}

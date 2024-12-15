@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/header_main.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/listeningSpace.css">
+    <link rel="stylesheet" href="../css/lyric.css">
+
+    <title>Document</title>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+
+<body>
+    <div class="mainLight"></div>
+
+    <header>
+        <div class="controlbar">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="logo">
+            </div>
+
+            <div class="searching">
+                <div class="home">
+                    <!-- <img class="img-home" src="../icon/icon_home.svg" alt=""> -->
+                    <iconify-icon icon="ic:round-home"></iconify-icon>
+                </div>
+                <div class="input-wrapper">
+                    <!-- <img src="../icon/icon_search.svg" alt=""> -->
+                    <iconify-icon icon="lucide:search"></iconify-icon>
+                    <input type="text" name="" id="">
+                </div>
+
+                <div class="voice-searching">
+                    <iconify-icon icon="mingcute:mic-fill"></iconify-icon>
+                    <!-- <img src="../icon/icon_voice_searching.svg" alt=""> -->
+                </div>
+            </div>
+
+            <div class="general">
+                <div class="notif">
+                    <!-- <img src="../icon/icon_notif.svg" alt=""> -->
+                    <iconify-icon icon="ri:notification-4-line"></iconify-icon>
+                </div>
+                <div class="account">
+                    <!-- <img src="../icon/icon_signout.svg" alt=""> -->
+                    <iconify-icon icon="mdi:account"></iconify-icon>
+
+                </div>
+                <p class="op_50" href="">ĐĂNG XUẤT</p>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Main space -->
+        <div class="mainSpace">
+            <div class="leftBar">
+
+            </div>
+
+            <div class="centerSpace">
+                <div class="wrapper-lyric">
+                    <p>I can read your mind "She's having the time of her life" There in her glittering prime The lights
+                        refract sequined stars off her silhouette every night I can show you lies (one, two, three,
+                        four)
+                        'Cause I'm a real tough kid, I can handle my shit They said, "Babe, you gotta fake it 'til you
+                        make it" and I did Lights, camera, bitch smile, even when you wanna die He said he'd love me all
+                        his life But that life was too short Breaking down, I hit the floor All the pieces of me
+                        shattered as the crowd was chanting, "More" I was grinning like I'm winning, I was hitting my
+                        marks 'Cause I can do it with a broken heart (one, two, three, four)
+                        I'm so depressed, I act like it's my birthday every day I'm so obsessed with him but he avoids
+                        me like the plague I cry a lot but I am so productive, it's an art You know you're good when you
+                        can even do it With a broken heart
+                        I can hold my breath I've been doing it since he left I keep finding his things in
+                        drawers Crucial evidence, I didn't imagine the whole thing I'm sure I can pass this test (one,
+                        two, three, four)
+                        'Cause I'm a real tough kid, I can handle my shit They said, "Babe, you gotta fake it 'til you
+                        make it" and I did Lights, camera, bitch smile, in stilettos for miles He said he'd love me for
+                        all time But that time was quite short Breaking down, I hit the floor All the pieces of me
+                        shattered as the crowd was chanting, "More" I was grinning like I'm winning, I was hitting my
+                        marks 'Cause I can do it with a broken heart (one, two, three)
+                        I'm so depressed, I act like it's my birthday every day I'm so obsessed with him but he avoids
+                        me like the plague (he avoids me) I cry a lot but I am so productive, it's an art You know
+                        you're good when you can even do it With a broken heart
+                        You know you're good when you can even do it With a broken heart You know you're good, I'm
+                        good 'Cause I'm miserable And nobody even knows Try and come for my job</p>
+                </div>
+
+
+            </div>
+
+            <div class="rightBar">
+
+            </div>
+        </div>
+
+        <!-- Listening Space -->
+        <div class="listeningSpace">
+            <div class="info">
+                <img src="../song/Taylor_Swift_-_I_Can_Do_It_With_a_Broken_Heart.png" alt="" class="picOfSong">
+
+                <div class="infoText">
+                    <p class="name ui_semibold">I can do this with the broken heart</p>
+                    <p class="author ui_regular op_75">Taylor Switf</p>
+                </div>
+
+                <div class="addToPlaylist">
+                    <iconify-icon icon="ic:round-plus"></iconify-icon>
+                </div>
+            </div>
+
+            <!-- Music player -->
+            <div class="musicPlayer">
+                <audio id="audioPlayer" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+                <div class="controlbar">
+                    <button id="lyricsBtn">
+                        <iconify-icon id="lyricsIcon" class="" icon="maki:karaoke"></iconify-icon>
+                    </button>
+
+                    <button id="backBtn">
+                        <iconify-icon id="backIcon" class="" icon="solar:skip-previous-bold"></iconify-icon>
+                    </button>
+
+                    <button id="mainControlBtn">
+                        <iconify-icon id="mainControlIcon" class="" icon="solar:play-bold"></iconify-icon>
+                    </button>
+
+                    <button id="nextBtn">
+                        <iconify-icon id="nextIcon" class="" icon="solar:skip-next-bold"></iconify-icon>
+                    </button>
+
+                    <button id="returnBtn">
+                        <iconify-icon id="returnIcon" class="" icon="icon-park-outline:return"></iconify-icon>
+                    </button>
+                </div>
+
+                <div class="timeDisplay">
+                    <span id="currentTime">0:00</span>
+                    <div class="progressContainer" id="progressContainer">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <span id="duration">3:38</span>
+                </div>
+            </div>
+
+            <!-- General space -->
+            <div class="general">
+                <button id="info">
+                    <iconify-icon id="infoIcon" icon="ic:round-info"></iconify-icon>
+                </button>
+
+                <div class="volumnSpace">
+                    <button id="output">
+                        <iconify-icon id="outputIcon" class="icon-active" icon="solar:volume-loud-bold"></iconify-icon>
+                    </button>
+                    <input type="range" id="volumnContainer" class="volumnContainer" min="0" max="100" value="100">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../script/listeningSpace.js"></script>
+</body>
+
+</html>

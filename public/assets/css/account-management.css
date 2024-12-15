@@ -1,0 +1,417 @@
+@font-face {
+    font-family: 'Inter',sans-serif;
+    src: url('/public/assets/font/Inter-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    color: #fff;
+}
+
+body {
+    text-align: center;
+    margin: auto;
+}
+
+main {
+        display: flow-root;
+        background-color: #000000;
+        justify-content: center;
+        text-align: left;
+        width: 100%;
+        height: 100%;
+}
+
+* {
+    font-family: "Inter", sans-serif ;
+    color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    height: 100%;
+    text-align: left;
+
+}
+
+body:active {
+    cursor: grabbing;
+    /* Đổi biểu tượng con trỏ khi đang kéo */
+}
+
+p,  
+img,
+.logo,
+div,
+iconify-icon,
+span,
+ul,
+li,
+h3,
+h4 {
+    background-color: transparent;
+    /* Đảm bảo nền trong suốt */
+}
+
+h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 110%;
+}
+
+h4 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 110%;
+    margin: 0;
+}
+.mainLight {
+    position: fixed;
+    width: 900px;
+    height: 651px;
+    left: 318px;
+    top: 200px;
+    border-radius: 50%/50%;
+
+    background: conic-gradient(from 24.89deg at 50% 50%, #3A2145 -6.85deg, #296265 31.06deg, #000000 109.37deg, #000000 139.56deg, #233949 214.7deg, #000000 244.08deg, #3A2145 353.15deg, #296265 391.06deg);
+    filter: blur(40px);
+}
+ .main-Space .chenThongMinh {
+    z-index: 100;
+}
+
+.main-Space {
+    padding-right: 100px;
+    top:500px;
+}
+
+
+p {
+    margin-top: 36px;
+    margin-bottom: 36px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    font-family: 'Inter', 'Semibold', 'Helvetica Neue', Helvetica, Arial;
+    font-weight: bold;
+}
+
+.accountSpace {
+
+        margin-left: -20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 0;
+        gap: 20px;
+    
+        position: absolute;
+        width: 880px;
+        left: 390px;
+        top: 117px;
+        overflow-y: scroll;
+    
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 20px 10px 10px 20px;
+        overflow: hidden;
+
+}
+
+.accountSpace .findSong {
+    display: flex;
+    justify-content: center; /* Căn giữa tìm kiếm */
+    flex-wrap: wrap; /* Gói lại khi không đủ không gian */
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+}
+
+.accountSpace .findSong .boxInput {
+    width: 100%; /* Mặc định chiếm toàn bộ chiều rộng màn hình */
+    max-width: 300px; /* Giới hạn chiều rộng tối đa */    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.accountSpace .findSong .boxInput #boxFind {
+    
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 30px;
+        height: 44px;
+        padding: 0%;
+        border: 0px;
+        padding-left: 50px;
+
+}
+
+.accountSpace .findSong #find {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 9px 18px;
+        gap: 10px;
+    
+        width: 107px;
+        height: 44px;
+    
+        background: #296265;
+        border-radius: 61px;
+        border: 0px;
+        cursor: pointer;
+        
+}
+
+.accountSpace .findSong button:hover {
+    background-color: #0056b3;
+        /* Màu nền khi hover (xanh đậm hơn) */
+        box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.5);
+        /* Hiệu ứng phát sáng */
+}
+
+.search-ic {
+    margin-left: 20px;
+    position: absolute;
+    
+
+}
+
+table {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        width: 100%;
+        border-color: transparent;
+        background-color: transparent;
+}
+
+th, td {
+    text-align: left;
+    background-color: transparent;
+    /* font-weight:bold; */
+    padding: 8px;
+}       
+
+
+/* định dạng thêm tài khoản */
+
+
+
+.addAccount, .updateAccount {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 440px;
+    height: 550px;
+    background: #000000;
+    padding-top: 20px;
+    border: 2px solid rgb(144, 143, 143);
+    border-radius: 20px;
+    z-index: 100000;
+}
+h1 {
+    font-size:20px;
+    text-align:center;
+}
+
+.addAccount #formaddAccount  table, .updateAccount #formaddAccount2 table {
+    margin-top: -30px;
+    position: flex;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.addAccount #formaddAccount  table tr, .updateAccount #formaddAccount2 table tr {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding-left: 13px;
+}
+
+#updateaccount #formaddAccount2 table tr {
+    display: flex !important;
+        /* Cưỡng chế flex */
+            flex-direction: column;
+    margin: 10px;
+    padding-left: 13px;
+
+
+}
+
+#formaddAccount2 {
+    margin-left: 35px;
+}
+
+#addaccount {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+#pakage {
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 10px;
+
+    width: 370px;
+    height: 40px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+}
+
+#package option {
+    color: #000000;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    /* Đặt icon trong khung */
+    right: 35px;
+    /* Căn về bên phải */
+    z-index: 1;
+    /* Đảm bảo biểu tượng nằm trên cùng */
+    cursor: pointer;
+    /* Thêm con trỏ chuột */
+    color: #f7f7f7;
+    /* Màu sắc icon */
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+#pakage:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+input[type="submit"],
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100px;
+    background: #296265;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.updateaccount #add, .addAccount #add {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 24px;
+    gap: 10px;
+
+    width: 107px;
+    height: 36px;
+
+    background: #296265;
+    border-radius: 5px;
+
+    margin-left: 265px;
+}
+
+.updateaccount #return ,.addAccount #return {
+    background: #3b7d7d;
+}
+
+#return {
+    display: flex;
+    margin-left: 50px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+#return:hover {
+    background: rgba(243, 241, 241, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+}
+
+option {
+    color: #dfdada;
+    /* Màu chữ cho các tùy chọn */
+    background-color: #333;
+    /* Màu nền của menu dropdown */
+}
+
+p:hover {
+    background: rgba(243, 241, 241, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 3px;
+    transition: background 0.2s ease, border 0.2s ease;
+}
+
+iconify-icon {
+    align-self: center;
+    color: #fff;
+}
+
+tr:hover {
+    background-color: #aacce6;
+    /* Màu nền khi di chuột vào hàng */
+    cursor: pointer;
+    /* Thay đổi con trỏ khi di chuột để tăng trải nghiệm */
+}
+#formaddAccount2 .box{
+    height: 100px;
+}
+#formaddAccount2 .box input, #formaddAccount2 .box select{
+    margin-top: 15px;
+}
+
+/* Media Queries sửa đổi để hỗ trợ thu nhỏ tốt hơn */
+@media (max-width: 768px) {
+    .accountSpace {
+        left: 195px; 
+    }
+
+    .accountSpace .findSong {
+        width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+        gap: 15px; /* Thu nhỏ khoảng cách giữa các phần tử */
+    }
+
+    .accountSpace .findSong .boxInput {
+        width: 70%; /* Tối ưu hóa độ rộng cho tìm kiếm */
+    }
+
+    .tableAccount table {
+        width: 100%; /* Tối đa chiều rộng bảng */
+    }
+
+    .tableAccount th, .tableAccount td {
+        padding: 8px; /* Giảm khoảng cách trong các ô */
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+}
+
+@media (max-width: 480px) {
+    .accountSpace {
+        left: 110px;
+    }
+}

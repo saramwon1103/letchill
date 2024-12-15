@@ -1,0 +1,1314 @@
+body {
+    background-image: url(../img/image-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền tối với độ trong suốt */
+    z-index: 999; /* Đảm bảo lớp phủ nằm dưới popup */
+    display: none; /* Ẩn lớp phủ khi không cần thiết */
+}
+/* MAIN_DIV   =============================================================================================================================================*/
+.main {
+    display: flex;
+    box-sizing: border-box;
+    position: fixed;
+    top: 113px; /*Đời đời nhớ ơn*/
+    left: 50%;
+    transform: translateX(-50%);
+    height: -webkit-fill-available;
+    width: 100%;
+    max-width: 1380px;
+
+    margin: 0 auto;
+    
+    display: flex;
+    gap: 20px;
+}
+#library {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 330px;
+    height: 630px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.15);
+    padding: 24px 24px;
+}
+#library-icon {
+    color: white;
+    font-size: 26px;
+    margin-right: 20px;
+}
+#library-text {
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif; /* Áp dụng font Inter */
+    font-weight: 650;
+}
+#plus-button {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+
+    margin-left: auto;
+}
+#plus-button:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+#playlist-button, #artist-button {
+    color: white;
+    border-radius: 26px;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 91px;
+    height: 32px;
+    margin-right: 20px;
+    margin-top: 28px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif; /* Áp dụng font Inter */
+    font-weight: 500;
+}
+#playlist-button:hover, #artist-button:hover {
+    color: black;   
+}
+#list-scroll {
+    margin-top: 40px;
+    width: 107%;
+    height: 456px;
+    overflow-y: scroll;
+}
+
+#list-scroll a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Cơ bản cho tất cả playlist */
+#list-scroll div {
+    height: 84px;
+    width: 255px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 12px; /* Thêm bo tròn cho toàn div */
+    transition: background-color 0.3s ease; /* Tạo hiệu ứng mượt */
+}
+
+/* Hiệu ứng hover cho các playlist */
+#list-scroll div:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Nền sáng lên khi hover */
+}
+
+/* Cấu hình icon */
+#list-scroll div img, 
+#list-scroll div i {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px; /* Đảm bảo bo góc */
+    margin-right: 20px;
+    transition: transform 0.3s ease; /* Hiệu ứng khi hover icon */
+}
+
+#list-scroll div:hover img, 
+#list-scroll div:hover i {
+    transform: scale(1.1); /* Tăng kích thước icon khi hover */
+}
+
+/* Văn bản trong playlist */
+#list-scroll div span {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+/* Màu sắc cho phần chữ nhỏ hơn */
+#list-scroll div span #playlist-text {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 450;
+    margin-top: 4px;
+}
+
+#list-scroll div {
+    margin-bottom: 20px;
+}
+
+/* Custom scrollbar cho danh sách playlist #1DB954 */
+#list-scroll {
+    /*scrollbar-width: thin; Thanh cuộn nhỏ*/
+    scrollbar-color: transparent transparent;
+}
+
+#danhsachyeuthich {
+    width: 249px;
+    display: flex;
+    cursor: pointer;
+}
+#heart-icon {
+    width: 72px;
+    height: 72px;
+    font-size: 24.62px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(69.93deg, #296265 1.75%, #344A5C 34.18%, #3F2F52 62.3%, #471C4B 88.25%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+#heart-icon i {
+    font-size: 24px; /* Đảm bảo kích thước hợp lý */
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 17px;
+}
+#danhsachyeuthich-text {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+#playlist-text {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 450;
+    margin-top: 4px;
+}
+#chillingwithheart {
+    width: 249px;
+    display: flex;
+    cursor: pointer;
+}
+#chillingwithheart img {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+#chillingwithheart-text {
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+/* ARTIST_DIV   ============================================================*/
+#artist {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 680px; /*680px / 1030px*/
+    width: 100%;
+    height: 630px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.15);
+    padding: 24px 24px;
+}
+#main-artist {
+    display: flex;
+    width: 982px;
+    height: 231px;
+}
+#avatar-artist img {
+    width: 231px;
+    height: 231px;
+    border-radius: 50%;
+    margin-right: 20px;;
+}
+.info-artist {
+    padding-top: 102px;
+    width: 731px;
+    height: 129px;
+    color: white;
+}
+#artist-text {
+    width: 731px;
+    height: 33px;
+    font-size: 22px;
+    font-weight: 500;
+}
+#artist-name {
+    width: 731px;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 800;
+}
+#artist-follower {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+#play {
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 24px;
+    width: 100%;
+    max-width: 982px;
+    height: 64px;
+}
+#circle #playbutton {
+    font-size: 40px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease; /* Hiệu ứng mượt */
+}
+
+#circle {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    background-color: #296265;
+    border-radius: 50%; /* Tạo hình tròn */
+    align-items: center;
+    justify-content: center;
+    margin-right: 47px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+#circle:hover #playbutton {
+    color: rgba(255, 255, 255, 0.5);
+}
+#circle #playbutton:active {
+    transform: scale(0.9); /* Thu nhỏ nút khi bấm */
+}
+#threedots i {
+    color: white;
+    font-size: 30px;
+}
+#threedots {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center; /*căn giữa theo phương dọc*/
+    margin-right: 47px;
+}
+#threedots i:hover {
+    color: rgba(255, 255, 255, 0.25);;
+    cursor: pointer;
+}
+#follow-button {
+    width: 152px;
+    height: 46px;
+    background-color: transparent;
+    border: white solid 2px;
+    border-radius: 28px;
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    align-self: center;
+    margin-right: 47px;
+}
+#follow-button:hover {
+    color: rgba(255, 255, 255, 0.5);
+    border: rgba(255, 255, 255, 0.5) solid 2px;
+    cursor: pointer;
+}
+#add-song-button, #delete-playlist-button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center; /*căn giữa theo phương dọc*/
+    margin-right: 47px;
+    color: #FFFFFF;
+    font-size: 30px;
+    cursor: pointer;
+}
+#add-song-button:hover, #delete-playlist-button:hover {
+    color: rgba(255, 255, 255, 0.25);;
+}
+#threebars i {
+    color: white;
+    font-size: 30px;
+}
+#threebars {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center; /*căn giữa theo phương dọc*/
+    margin-left: auto ;
+}
+#threebars i:hover {
+    color: rgba(255, 255, 255, 0.25);;
+    cursor: pointer;
+}
+#listsong {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    width: 100%;
+    max-width: 981px;
+    height: 238px; /*350px;*/
+}
+#listsong-title {
+    display: flex;
+    color: #CCCCCC;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+#sharp-title {
+    margin-right: 73px;
+    padding-left: 12px;
+}
+#ngaythem-title {
+    margin-left: auto;
+    margin-right: 70px;
+}
+#songs {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Thêm thanh cuộn dọc khi cần */
+    /*scrollbar-width: thin;  Thanh cuộn nhỏ */
+    scrollbar-color: transparent transparent;
+    padding-right: 20px;
+    flex: 1;
+}
+#songs div {
+    /* height: 63px; */
+    display: flex;
+    padding: 8px 12px; /* Thêm khoảng cách giữa các playlist */
+    margin-bottom: 16px;
+    border-radius: 12px; /* Thêm bo tròn cho toàn div */
+    transition: background-color 0.3s ease; /* Tạo hiệu ứng mượt */
+    cursor: pointer;
+    align-items: center;
+}
+/* Hiệu ứng cho bài hát đang phát */
+#songs div.playing {
+    background-color: rgba(41, 98, 101, 0.2); /* Nền sáng hơn */
+    border-left: 4px solid #296265; /* Đường viền để nhấn mạnh */
+}
+#songs div:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Nền sáng lên khi hover */
+}
+#songs div:hover img{
+    transform: scale(1.1); /* Tăng kích thước icon khi hover */
+}
+#songs #stt {
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    margin-right: 34px;
+    width: 50px;
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+#songs img {
+    width: 63px;
+    height: 63px;
+    border-radius: 4px;
+    margin-right: 20px;
+    align-content: center;
+    align-items: center;
+    height: auto; /* Để duy trì tỉ lệ */
+    transition: transform 0.3s ease; /* Hiệu ứng khi hover icon */
+}
+#songs #namesong {
+    color: white;
+    width: 300px;
+    margin-top: 3.5px;
+    font-size: 24px;
+    font-weight: 800;
+    white-space: nowrap;          /* Không cho xuống dòng */
+    overflow: hidden;             /* Ẩn phần tràn */
+    text-overflow: ellipsis;      /* Hiển thị dấu ba chấm (...) */
+    display: block;
+}
+#songs #author {
+    color: white;
+    margin-top: 6px;
+    width: 466px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #CCCCCC;
+}
+#songs #date {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    align-content: center;
+    margin-left: auto;
+    margin-right: 30px;
+}
+#delete-icon {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    color: white;
+    transition: scale 0.5ms;
+    font-size: 20px;
+}
+#delete-icon:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+#delete-icon:active {
+    transform: scale(0.9);
+}
+/* INFO_DIV   ============================================================*/
+#info-div {
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px ; /*24px 25px*/
+    gap: 16px;
+    
+    overflow: hidden;
+    
+    height: 630px;
+    width: 100%;
+    max-width: 0px; /*330px*/
+    background: rgba(255, 255, 255, 0.1);
+    border: 0px; /*1px solid rgba(255, 255, 255, 0.15);*/
+    border-radius: 20px 10px 10px 20px;
+}
+#info-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 10px;
+    padding-right: 5px;
+    width: 301px;
+    flex-direction: column;
+    align-items: center;
+    /*scrollbar-width: thin;  Thanh cuộn nhỏ */
+    scrollbar-color: transparent transparent;
+}
+#info-plus {
+    margin-left: auto;
+    background: transparent;
+    color: white;
+    outline: none;
+    border: none;
+}
+#info-2icon {
+    display: flex;
+    box-sizing: border-box;
+    width: 281px;
+    height: 26px;
+    align-items: center;
+}
+#info-exit {
+    right: 0px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: transparent;
+}
+#info-plus:hover svg path, #info-exit:hover svg path {
+    fill: rgba(255, 255, 255, 0.5);
+}
+#info-plus:hover , #info-exit:hover {
+    cursor: pointer;
+}
+#infodiv-song img {
+    width: 281px;
+    height: 281px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#infodiv-song {
+    width: 281px;
+    height: 381px;
+}
+#info-namesong {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    width: 281px;
+    height: 56px;
+    white-space: nowrap;          /* Không cho xuống dòng */
+    overflow: hidden;             /* Ẩn phần tràn */
+    text-overflow: ellipsis;      /* Hiển thị dấu ba chấm (...) */
+    display: block;    
+    
+}
+#info-authorsong {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+#custom-rate {
+    box-sizing: border-box;
+    width: 281px;
+    height: 136px;
+    border-radius: 10px;
+    background: black;
+    padding: 12px 16px;
+    margin-top: 20px;
+}
+#custom-rate-header {
+    display: flex;
+    width: 100%;
+}
+#rate-danhgia, #rate-tatca {
+    color: white;
+    font-size: 18px;
+    font-weight: 500px;
+}
+#rate-tatca {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#rating-container {
+    display: flex;
+    gap: 4px;
+    width: 240px;
+    height: 12px;
+}
+
+#rating-container span i {
+    font-size: 12px;
+    color: white;
+}
+
+#rating-container span i.active {
+    color: #296265; /* Màu #296265 cho các chấm đã được đánh giá */
+}
+
+/* Màu khi hover #296265 */
+#custom-name{
+    color: white;
+    font-size: 18px;
+    font-weight: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+#rate-comment {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+#info-artist-follow {
+    margin-top: 20px;
+    width: 281px;
+    height: 216x;
+    display: flex;
+    flex-direction: column;
+}
+#info-artist-follow-img {
+    background-image: url('/MVC/View/img/artist6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 281px;
+    height: 160px;
+    border-radius: 10px;
+    display: flex;
+}
+#info-artist-follow-img span {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 8px 16px;
+}
+#info-artist-follow-title {
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#info-artist-follow-title span {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+#info-artist-follow-title button {
+    height: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    width: 99px;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 26px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400px;
+}
+#info-artist-follow-title button:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+/*pop up thêm danh sách phát*/
+#create-newlist {
+    position: absolute;
+    background-color: #000000;
+    box-sizing: border-box;
+    width: 440px;
+    height: 674px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -53%) scale(0.76);
+    font-size: 20px;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    z-index: 1000;
+
+    transition: display 0.5s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+#create-newlist #return {
+    height: 50.74px;
+    width: 50.74px;
+    margin-left: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+
+#create-newlist #lbl-create {
+
+    width: 221px;
+    height: 26px;
+    left: calc(50% - 221px/2 + 0.5px);
+    top: 103px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 110%;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Inter', 'extra bold';
+    font-size: 24px;
+}
+
+#create-newlist #name-list {
+    display: block;
+    width: 325px;
+    height: 74.75px;
+    margin: 25px auto;
+    gap: 6px;
+    font-family: 'inter', 'extra bold';
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+input[name=name-list] {
+
+    box-sizing: border-box;
+    padding: 17px 20px;
+    width: 325px;
+    height: 56px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+}
+
+#create-newlist #scription {
+    width: 324px;
+    height: 190px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'inter', 'extra bold';
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+textarea[name=scription] {
+    box-sizing: border-box;
+    width: 324px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    padding: 17px;
+    resize: none; /* Loại bỏ khả năng thay đổi kích thước */
+    overflow-wrap: break-word; /* Cho phép văn bản tự động xuống dòng */
+    word-wrap: break-word; /* Hỗ trợ trình duyệt cũ */
+    text-align: left; /* Căn văn bản sang trái */
+    vertical-align: top; /* Căn văn bản theo chiều dọc */
+    line-height: 1.4; /* Khoảng cách giữa các dòng */
+    font-family: 'Inter', sans-serif;
+}
+
+
+#choose-image {
+    display: flex;
+    background-color: transparent;
+    border: transparent !important;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 103px;
+    height: 103px;
+    cursor: pointer;
+    align-items: center; /* Căn giữa nội dung theo trục dọc */
+    justify-content: center; /* Căn giữa nội dung theo trục ngang */
+    overflow: hidden; /* Ẩn các phần thừa của ảnh */
+}
+#choose-image img {
+    box-sizing: border-box;
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+input[type=submit] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 24px;
+    gap: 10px;
+
+    width: 77px;
+    height: 36px;
+    left: 305px;
+    top: 598px;
+
+    background: #296265;
+    border-radius: 5px;
+
+    margin-right: 56px;
+    margin-left: auto;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+#them-bh-playlist {
+    position: absolute;
+    background-color: #000000;
+    box-sizing: border-box;
+    width: 440px;
+    height: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    z-index: 1000;
+
+    transition: display 0.5s ease; /* Thêm hiệu ứng chuyển động */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 110%;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+#them-bh-playlist #return {
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    margin-left: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+#them-ten-bh {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #FFFFFF;
+    gap: 20px;
+}
+input[name=tenbh] {
+    box-sizing: border-box;
+    padding: 17px 20px;
+    width: 325px;
+    height: 56px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+}
+#form-them-bh input[type=submit] {
+    width: 100px;
+    margin: 28px 0 0 auto;
+}
+/*form xóa bài hát*/
+#xoa-bh-playlist {
+    position: absolute;
+    background-color: #000000;
+    box-sizing: border-box;
+    width: 440px;
+    height: 170px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    align-items: center;
+    display: none; /*Ẩn hiện form*/
+    z-index: 1000;
+
+    transition: display 0.5s ease; /* Thêm hiệu ứng chuyển động */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 110%;
+    align-items: center;
+    flex-direction: column;
+
+    color: #FFFFFF;
+    padding: 15px 20px;
+}
+
+#div-form-xoa-bh {
+    display: flex;
+    width: 100%;
+    height: 36px;
+}
+
+#form-xoa-bh {
+    width: 100px;
+    margin-right: 50px;
+    margin-left: auto;
+}
+
+#xoa-bh-submit {
+    border: none;
+    padding: 6px 24px;
+
+    width: 100px;
+    height: 36px;
+
+    background: #296265;
+    border-radius: 5px;
+
+    margin-right: 50px;
+    margin-left: auto;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: scale 0.5ms;
+}
+
+#cancel-button {
+    border: none;
+    padding: 6px 24px;
+
+    width: 100px;
+    height: 36px;
+
+    background: #296265;
+    border-radius: 5px;
+
+    justify-content: center;
+
+    margin-left: 50px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: scale 1ms;
+}
+
+#xoa-bh-submit:active, #cancel-button:active {
+    transform: scale(0.95);
+}
+
+/*form xóa danh sách phát*/
+#popup-xoa-playlist {
+    position: absolute;
+    background-color: #000000;
+    box-sizing: border-box;
+    width: 440px;
+    height: 170px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    align-items: center;
+    display: none; /*Ẩn hiện form*/
+    z-index: 1000;
+
+    transition: display 0.5s ease; /* Thêm hiệu ứng chuyển động */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 110%;
+    align-items: center;
+    flex-direction: column;
+
+    color: #FFFFFF;
+    padding: 15px 20px;
+}
+
+#div-form-xoa-playlist {
+    display: flex;
+    width: 100%;
+    height: 36px;
+}
+
+#form-xoa-playlist {
+    width: 100px;
+    margin-right: 50px;
+    margin-left: auto;
+}
+
+#xoa-playlist-submit {
+    border: none;
+    padding: 6px 24px;
+
+    width: 100px;
+    height: 36px;
+
+    background: #296265;
+    border-radius: 5px;
+
+    margin-right: 50px;
+    margin-left: auto;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: scale 0.5ms;
+}
+
+#cancel-button-playlist {
+    border: none;
+    padding: 6px 24px;
+
+    width: 100px;
+    height: 36px;
+
+    background: #296265;
+    border-radius: 5px;
+
+    justify-content: center;
+
+    margin-left: 50px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: scale 1ms;
+}
+
+#xoa-playlist-submit:active, #cancel-button-playlist:active {
+    transform: scale(0.95);
+}
+
+/* Thiết bị tablet */
+@media (max-width: 768px) {
+    .main {
+        gap: 18px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #artist {
+        height: auto; /* Cho phép chiều cao tự điều chỉnh */
+        width: 320px; /* Chiếm toàn bộ chiều rộng */
+    }
+    #info-div {
+        height: auto; /* Cho phép chiều cao tự điều chỉnh */
+        width: 260px; /* Chiếm toàn bộ chiều rộng */
+    }
+    .info-artist {
+        display: none;
+    }
+    #main-artist {
+        height: auto;
+    }
+    #avatar-artist {
+        width: auto;
+        height: auto;
+    }
+    #avatar-artist img {
+        width: 282px;
+        height: 282px;
+        margin: 0px;
+        object-fit: cover;
+    }
+    #threedots, #threebars, #ngaythem-title, #date {
+        display: none;
+    }
+    #circle {
+        margin-right: auto;
+    }
+    #namesong {
+        width: 80px;;
+    }
+    #sharp-title {
+        margin-right: 38px;
+    }
+    #delete-icon {
+        margin-left: 10px;
+    }
+    .main {
+        height: 792px;
+    }
+    #listsong {
+        height: auto;
+    }
+    #songs {
+        height: 314px;
+    }
+    #list-scroll {
+        height: 680px;
+    }
+    #library {
+        width: 134px;
+        height: auto;
+    }
+    #library-text, #type-playlist {
+        display: none;
+    }
+    #info-div {
+        max-width: 330px;
+        padding: 24px;
+    }
+    #info-2icon {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #info-plus {
+        margin-left: auto;
+    }
+    #info-body, #infodiv-song, #info-namesong, #custom-rate, #info-artist-follow, #info-artist-follow-img {
+        width: 212px;
+    }
+    #info-body {
+        padding: 0px;
+    }
+    #infodiv-song {
+        height: auto;
+    }
+    #infodiv-song img {
+        width: 212px;
+        height: 212px;
+    }
+    #info-authorsong {
+        margin-top: 2px;
+    }
+    #info-artist-follow-img span {
+        z-index: 5;
+    }
+
+}
+
+#artist-following-title{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+/* Thiết bị điện thoại */
+@media (max-width: 400px) {
+    .main {
+        gap: 18px;
+        transform: scale(0.8);
+        transform-origin: top left;
+        left: 0;
+    }
+
+    #artist {
+        height: auto; /* Cho phép chiều cao tự điều chỉnh */
+        width: 320px; /* Chiếm toàn bộ chiều rộng */
+    }
+    #info-div {
+        height: auto; /* Cho phép chiều cao tự điều chỉnh */
+        width: 260px; /* Chiếm toàn bộ chiều rộng */
+    }
+    .info-artist {
+        display: none;
+    }
+    #main-artist {
+        height: auto;
+    }
+    #avatar-artist {
+        width: auto;
+        height: auto;
+    }
+    #avatar-artist img {
+        width: 282px;
+        height: 282px;
+        margin: 0px;
+        object-fit: cover;
+    }
+    #threedots, #threebars, #ngaythem-title, #date {
+        display: none;
+    }
+    #circle {
+        margin-right: auto;
+    }
+    #namesong {
+        width: 80px;;
+    }
+    #sharp-title {
+        margin-right: 38px;
+    }
+    #delete-icon {
+        margin-left: 10px;
+    }
+    .main {
+        height: 792px;
+    }
+    #listsong {
+        height: auto;
+    }
+    #songs {
+        height: 314px;
+    }
+    #list-scroll {
+        height: 680px;
+    }
+    #library {
+        width: 134px;
+        height: auto;
+    }
+    #library-text, #type-playlist {
+        display: none;
+    }
+    #info-div {
+        max-width: 330px;
+        padding: 24px;
+    }
+    #info-2icon {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #info-plus {
+        margin-left: auto;
+    }
+    #info-body, #infodiv-song, #info-namesong, #custom-rate, #info-artist-follow, #info-artist-follow-img {
+        width: 212px;
+    }
+    #info-body {
+        padding: 0px;
+    }
+    #infodiv-song {
+        height: auto;
+    }
+    #infodiv-song img {
+        width: 212px;
+        height: 212px;
+    }
+    #info-authorsong {
+        margin-top: 2px;
+    }
+    #info-artist-follow-img span {
+        z-index: 5;
+    }
+}
+

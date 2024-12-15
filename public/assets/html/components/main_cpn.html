@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/MVC/View/css/header_main.css">
+    <link rel="stylesheet" href="/MVC/View/css/main.css">
+    <link rel="stylesheet" href="/MVC/View/css/listeningSpace.css">
+    <link rel="stylesheet" href="/MVC/View/css/main_cpm.css">
+    <title>Document</title>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+
+<body>
+    <div class="mainLight"></div>
+
+    <header>
+        <div class="controlbar">
+            <div class="logo">
+                <img src="/MVC/View/img/logo.svg" alt="logo">
+            </div>
+
+            <div class="searching">
+                <div class="home">
+                    <!-- <img class="img-home" src="/MVC/View/icon/icon_home.svg" alt=""> -->
+                    <iconify-icon icon="ic:round-home"></iconify-icon>
+                </div>
+                <div class="input-wrapper">
+                    <!-- <img src="/MVC/View/icon/icon_search.svg" alt=""> -->
+                    <iconify-icon icon="lucide:search"></iconify-icon>
+                    <input type="text" name="" id="">
+                </div>
+
+                <div class="voice-searching">
+                    <iconify-icon icon="mingcute:mic-fill"></iconify-icon>
+                    <!-- <img src="/MVC/View/icon/icon_voice_searching.svg" alt=""> -->
+                </div>
+            </div>
+
+            <div class="general">
+                <div class="notif">
+                    <!-- <img src="/MVC/View/icon/icon_notif.svg" alt=""> -->
+                    <iconify-icon icon="ri:notification-4-line"></iconify-icon>
+                </div>
+                <div class="account">
+                    <!-- <img src="/MVC/View/icon/icon_signout.svg" alt=""> -->
+                    <iconify-icon icon="mdi:account"></iconify-icon>
+
+                </div>
+                <p class="op_50" href="">ĐĂNG XUẤT</p>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Main space -->
+        <div class="mainSpace">
+            <div class="leftBar">
+
+            </div>
+
+            <div class="centerSpace scrollable">
+                <!-- Slider -->
+                <div class="sliderContainer">
+                    <div class="trending">
+                        <iconify-icon icon="solar:fire-bold"></iconify-icon>
+                        <div class="trendingTopic">
+                            <h3>Top bài hát&nbsp;</h3>
+                            <h3 style="color: #296265;"> thịnh hành</h3>
+                        </div>
+                    </div>
+
+
+                    <div id="slider">
+                        <div class="info">
+                            <h3 id="nameInfo" class="name">Ngáo ngơ</h3>
+                            <p id="authodInfo" class="author p2">Erik, Jsol, Orange, HIEUTHUHAI, Anh Tú Atus</p>
+                        </div>
+                        <ul class="dots">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="shadow"></div>
+                        <div class="imgList">
+                            <div class="itemImg">
+                                <img id="imageSlider1" src="/MVC/View/img/slider/ngao_ngo.jpg" alt="">
+                            </div>
+                            <div class="itemImg">
+                                <img id="imageSlider1" src="/MVC/View/img/slider/dlttad.jpg" alt="">
+                            </div>
+                            <div class="itemImg">
+                                <img id="imageSlider1" src="/MVC/View/img/slider/new_woman.jpg" alt="">
+                            </div>
+                            <div class="itemImg">
+                                <img id="imageSlider1" src="/MVC/View/img/slider/seenderella.jpg" alt="">
+                            </div>
+                            <div class="itemImg">
+                                <img id="imageSlider1" src="/MVC/View/img/slider/mong_yu.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Artist -->
+                <div class="popularArtistContainer">
+                    <div class="popularArtistTopic">
+                        <h4>Nghệ sĩ phổ biến</h4>
+                    </div>
+
+                    <div id="artistScroll" class="scrollable">
+                        <div class="artistItem">
+                            <img src="/MVC/View/img/artists/hieuthuhai.jpg" alt="" class="avatarArtist">
+                            <div class="info">
+                                <p class="ui_semibold">HIEUTHUHAI</p>
+                                <p class="ui_regular op_75">Nghệ sĩ</p>
+                            </div>
+                        </div>
+
+                        <div class="artistItem">
+                            <img src="/MVC/View/img/artists/amee.webp" alt="" class="avatarArtist">
+                            <div class="info">
+                                <p class="ui_semibold">AMEE</p>
+                                <p class="ui_regular op_75">Nghệ sĩ</p>
+                            </div>
+                        </div>
+
+                        <div class="artistItem">
+                            <img src="/MVC/View/img/artists/son_tung_mtp.jpg" alt="" class="avatarArtist">
+                            <div class="info">
+                                <p class="ui_semibold">Sơn Tùng MTP</p>
+                                <p class="ui_regular op_75">Nghệ sĩ</p>
+                            </div>
+                        </div>
+
+                        <div class="artistItem">
+                            <img src="/MVC/View/img/artists/soobin.jpg" alt="" class="avatarArtist">
+                            <div class="info">
+                                <p class="ui_semibold">Soobin</p>
+                                <p class="ui_regular op_75">Nghệ sĩ</p>
+                            </div>
+                        </div>
+
+                        <div class="artistItem">
+                            <img src="/MVC/View/img/artists/vu.jpg" alt="" class="avatarArtist">
+                            <div class="info">
+                                <p class="ui_semibold">Vũ</p>
+                                <p class="ui_regular op_75">Nghệ sĩ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightBar">
+
+            </div>
+        </div>
+
+
+        </div>
+
+        <!-- Listening Space -->
+        <div class="listeningSpace">
+            <div class="info">
+                <img src="/MVC/View/song/Taylor_Swift_-_I_Can_Do_It_With_a_Broken_Heart.png" alt="" class="picOfSong">
+
+                <div class="infoText">
+                    <p class="name ui_semibold">I can do this with the broken heart</p>
+                    <p class="author ui_regular op_75">Taylor Switf</p>
+                </div>
+
+                <div class="addToPlaylist">
+                    <iconify-icon icon="ic:round-plus"></iconify-icon>
+                </div>
+            </div>
+
+            <!-- Music player -->
+            <div class="musicPlayer">
+                <audio id="audioPlayer" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+                <div class="controlbar">
+                    <button id="lyricsBtn">
+                        <iconify-icon id="lyricsIcon" class="" icon="maki:karaoke"></iconify-icon>
+                    </button>
+
+                    <button id="backBtn">
+                        <iconify-icon id="backIcon" class="" icon="solar:skip-previous-bold"></iconify-icon>
+                    </button>
+
+                    <button id="mainControlBtn">
+                        <iconify-icon id="mainControlIcon" class="" icon="solar:play-bold"></iconify-icon>
+                    </button>
+
+                    <button id="nextBtn">
+                        <iconify-icon id="nextIcon" class="" icon="solar:skip-next-bold"></iconify-icon>
+                    </button>
+
+                    <button id="returnBtn">
+                        <iconify-icon id="returnIcon" class="" icon="icon-park-outline:return"></iconify-icon>
+                    </button>
+                </div>
+
+                <div class="timeDisplay">
+                    <span id="currentTime">0:00</span>
+                    <div class="progressContainer" id="progressContainer">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <span id="duration">3:38</span>
+                </div>
+            </div>
+
+            <!-- General space -->
+            <div class="general">
+                <button id="info">
+                    <iconify-icon id="infoIcon" icon="ic:round-info"></iconify-icon>
+                </button>
+
+                <div class="volumnSpace">
+                    <button id="output">
+                        <iconify-icon id="outputIcon" class="icon-active" icon="solar:volume-loud-bold"></iconify-icon>
+                    </button>
+                    <input type="range" id="volumnContainer" class="volumnContainer" min="0" max="100" value="100">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/MVC/View/script/listeningSpace.js"></script>
+    <script src="/MVC/View/script/main_cpn.js"></script>
+</body>
+
+</html>

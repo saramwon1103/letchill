@@ -1,0 +1,154 @@
+.centerSpace .sliderContainer {
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.centerSpace .trending,
+.centerSpace .trending .trendingTopic {
+    display: flex;
+    flex-direction: row;
+}
+
+.centerSpace .trending {
+    gap: 16px;
+}
+
+.centerSpace h3,
+.centerSpace p {
+    margin: 0;
+    transition: 0.5s ease;
+}
+
+/* Slider */
+
+.centerSpace #slider {
+    width: 100%;
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.centerSpace #slider .info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    left: 50px;
+}
+
+.centerSpace #slider .dots {
+    position: absolute;
+    bottom: 12px;
+    display: flex;
+    gap: 16px;
+    z-index: 2;
+    color: #fff;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+
+.centerSpace #slider .dots li {
+    list-style: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s ease;
+}
+
+.centerSpace #slider .dots li.active {
+    width: 42px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.centerSpace #slider .shadow {
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 5px 0px 0px 5px;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.centerSpace #slider .imgList {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transition: 0.5s;
+}
+
+.centerSpace #slider .imgList .itemImg {
+    position: relative;
+    width: 100%;
+    inset: 0 0 0 0;
+    border-radius: 5px;
+}
+
+.centerSpace #slider .imgList img {
+    width: 612px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Popular Artist */
+
+.centerSpace .popularArtistContainer {
+    margin: 24px;
+}
+
+.centerSpace #artistScroll .artistItem .info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+
+}
+
+.centerSpace #artistScroll .artistItem img {
+    width: 136px;
+    height: 136px;
+    border-radius: 136px;
+    object-fit: cover;
+}
+
+.centerSpace #artistScroll .artistItem {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 16px 22px;
+    border-radius: 8px;
+}
+
+.centerSpace #artistScroll .artistItem:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.centerSpace .popularArtistContainer #artistScroll {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: none;
+    overflow: auto;
+    width: 100%;
+}

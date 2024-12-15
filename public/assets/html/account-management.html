@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/account-management.css">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <!-- Định dạng mcolumn;nền của trang -->
+        <div class="mainLight"></div>  
+        </div>
+
+        <!-- màn hình chính -->
+        <div class="main-Space">
+            <div class="controlBar">
+                <div class="manageSong"> Quản lý bài hát
+
+                </div>
+
+                <div class="manageAccount">
+                    <div class="content">
+                        <p id="account">Quản lý tài khoản</p>
+
+                        <div class="figure">
+                            <p>
+                                <iconify-icon icon="line-md:plus-circle-filled" width="1.2em" height="1.2em"></iconify-icon>
+                                Thêm tài khoản 
+                            </p>
+                            <p>
+                                <iconify-icon icon="mdi:pencil-circle" width="1.2em" height="1.2em"></iconify-icon>
+                                Cập nhật tài khoản
+                            </p>
+                            <p> 
+                                <iconify-icon icon="streamline:recycle-bin-2-solid" width="1.2em" height="1.2em"></iconify-icon>
+                                Xóa tài khoản
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Report"> 
+                    <p id="account">
+                        <iconify-icon icon="carbon:report" width="1.2em" height="1.2em" style="color: white"></iconify-icon>                        
+                        Báo cáo
+                    </p>
+                    
+
+                </div>
+
+            </div>
+
+            <div class="accountSpace">
+                <div class="findSong">
+
+                    <div class="boxInput">
+                        <input id="boxFind" type="text">
+                        <iconify-icon class="search-ic" icon="material-symbols:search" width="1.2em" height="1.2em"
+                            style="color: white"></iconify-icon>
+                    </div>                  
+                        
+
+                    <button id="find" type = "submit">
+                        Tìm Kiếm 
+                    </button>
+
+                </div>
+
+
+                <!-- Tạo bảng -->
+                <div class="tableAccount">
+                    <table>
+                        <colgroup>
+                                <col style="width: 34px;">
+                                <col style="width: 50px;" >
+                                <col style="width: 240px;">
+                                <col style="width: 240px;">
+                                <col style="width: 240px;">
+                                <col style="width: 240px;">
+
+                        </colgroup>
+                        <thead>
+                            
+                            <tr>
+                                <th ><input type = "checkbox" id = "selectAll"></th>
+                                <th >#</th>
+                                <th >Tên tài khoản</th>
+                                <th >Gói đang dùng</th>
+                                <th >Ngày bắt đầu gói</th>
+                                <th >Ngày kết thúc gói</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" id="checkbox"></td>
+                                <td>1</td>
+                                <td>Nguyen Van An</td>
+                                <td>Premium</td>
+                                <td>11/11/2024</td>
+                                <td>10/12/2024</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" id="checkbox"></td>
+                                <td>1</td>
+                                <td>Nguyen Van An</td>
+                                <td>Premium</td>
+                                <td>11/11/2024</td>
+                                <td>10/12/2024</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" id="checkbox"></td>
+                                <td>1</td>
+                                <td>Nguyen Van An</td>
+                                <td>Premium</td>
+                                <td>11/11/2024</td>
+                                <td>10/12/2024</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" id="checkbox"></td>
+                                <td>1</td>
+                                <td>Nguyen Van An</td>
+                                <td>Premium</td>
+                                <td>11/11/2024</td>
+                                <td>10/12/2024</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" id="checkbox"></td>
+                                <td>1</td>
+                                <td>Nguyen Van An</td>
+                                <td>Premium</td>
+                                <td>11/11/2024</td>
+                                <td>10/12/2024</td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" id="checkbox"></td>
+                                <td>1</td>
+                                <td>Nguyen Van An</td>
+                                <td>Premium</td>
+                                <td>11/11/2024</td>
+                                <td>10/12/2024</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+
+                    
+                </div>
+
+            </div>
+    
+        </div>
+
+        <!-- Thêm tài khoản -->
+         <div class="addAccount" style="display: none;">
+            <form id="formaddAccount" action="" method="post">
+                <table>
+                    <tr>
+                        <!-- Icon quay lai -->
+                         <span id="return"><iconify-icon icon="ic:round-arrow-back-ios-new" width="1.2em" height="1.2em" style="color: white"></iconify-icon></span>
+                    </tr>
+
+                    <tr>
+                        <h1>Thêm tài khoản</h1>
+
+                    </tr>
+                    <tr>
+                        <td><span style="width: 325px;">Tên tài khoản</span></td>
+                        <td><input type="text" name="username" required></td>
+                    </tr>
+                    <tr>
+                        <td>Gói sử dụng</td>
+                        <td>
+                            <select id="pakage" name="pakage">
+                            <option value="Mini">Mini</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Student">Student</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ngày Bắt đầu gói</td>
+                        <td><input type="date" name="datestart" required></td>
+                    </tr>
+                    <tr>
+                        <td>Ngày kết thúc gói</td>
+                        <td><input type="date" name="datefinish" required></td>
+                    </tr>
+                    <tr>
+                        <td><button id="add" type="submit">Tạo</button></td>
+                    </tr>
+                </table>
+            </form>
+
+
+
+        </div>
+           
+
+
+    </main>
+
+    
+</body>
+</html>

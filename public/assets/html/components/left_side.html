@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  <link rel="stylesheet" href="/MVC/View/css/main.css">-->
+    <link rel="stylesheet" href="/MVC/View/css/left_side.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Document</title>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+
+<body>
+    <div class="mainLight"></div>
+
+    <main>
+        <!-- Main space -->
+        <div class="mainSpace">
+            <!-- Left bar -->
+            <div class="leftBar">
+
+                <div class="wrapper">
+                    <div class="head">
+                        <div class="head-1">
+                            <div class="lib">
+                                <iconify-icon icon="fluent:library-24-filled"></iconify-icon>
+                                <p class="TV">Thư viện</p>
+                            </div>
+                            <div class="plus">
+                                <iconify-icon icon="ic:sharp-plus"></iconify-icon>
+                            </div>
+                        </div>
+
+                        <div class="head-2">
+                            <div class="playlist">
+                                Playlist
+                            </div>
+                            <div class="artist">
+                                Nghệ sĩ
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="list">
+                        <div class="box">
+                            <div class="image">
+
+                                <!--chèn hình ảnh-->
+                                <img src="/MVC/View/img/ha.svg" alt="">
+                            </div>
+                            <div class="song-artist">
+                                <p class="BH"><!--chen ten bai hat-->Healing cực mạnh</p>
+                                <p class="NS"><!--chen ten nghe si-->Playlist</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="image">
+                                <!--chèn hình ảnh-->
+                                <img src="/MVC/View/img/ha1.svg" alt="">
+                            </div>
+                            <div class="song-artist">
+                                <p class="BH"><!--chen ten bai hat-->Nhạc của Trang </p>
+                                <p class="NS"><!--chen ten nghe si-->Nghệ sĩ</p>
+                            </div>
+
+                        </div>
+                        <div class="box">
+                            <div class="image">
+
+                                <!--chèn hình ảnh-->
+                                <img src="/MVC/View/img/ha.svg" alt="">
+                            </div>
+                            <div class="song-artist">
+                                <p class="BH"><!--chen ten bai hat-->Healing cực mạnh</p>
+                                <p class="NS"><!--chen ten nghe si-->Playlist</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="image">
+                                <!--chèn hình ảnh-->
+                                <img src="/MVC/View/img/ha1.svg" alt="">
+                            </div>
+                            <div class="song-artist">
+                                <p class="BH"><!--chen ten bai hat-->Nhạc của Trang </p>
+                                <p class="NS"><!--chen ten nghe si-->Nghệ sĩ</p>
+                            </div>
+
+                        </div>
+                        <div class="box">
+                            <div class="image">
+
+                                <!--chèn hình ảnh-->
+                                <img src="/MVC/View/img/ha.svg" alt="">
+                            </div>
+                            <div class="song-artist">
+                                <p class="BH"><!--chen ten bai hat-->Healing cực mạnh</p>
+                                <p class="NS"><!--chen ten nghe si-->Playlist</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="image">
+                                <!--chèn hình ảnh-->
+                                <img src="/MVC/View/img/ha1.svg" alt="">
+                            </div>
+                            <div class="song-artist">
+                                <p class="BH"><!--chen ten bai hat-->Nhạc của Trang </p>
+                                <p class="NS"><!--chen ten nghe si-->Nghệ sĩ</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Create new list -->
+        <div class="create-newlist">
+            <div class="return">
+                <img src="/MVC/View/icon/ic-return.svg" alt="">
+            </div>
+
+
+            <div class="lbl-create">
+                <p>Tạo danh sách mới</p>
+            </div>
+
+            <form name="create-newlist" action="">
+                <button class="choose-image">
+                    <img src="/MVC/View/img/insert-img.svg" alt="">
+                </button>
+                <input type="file" id="file-upload" style="display: none;">
+                <!-- <img id="image-preview" src="" alt="Preview"> -->
+
+                <div class="name-list">
+                    <p>Tên danh sách</p>
+                    <input type="text" name="name-list">
+                </div>
+
+                <div class="scription">
+                    <p>Mô tả</p>
+                    <input type="textarea" name="scription">
+                </div>
+
+                <input type="submit" value="Tạo">
+            </form>
+        </div>
+
+    </main>
+    <script src="/MVC/View/script/leftBar.js"></script>
+
+
+</body>
+
+</html>

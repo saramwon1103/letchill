@@ -1,0 +1,287 @@
+body {
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+.navigation-buttons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.left-button {
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.left-button img {
+    filter: brightness(0) invert(1);
+    width: 50.74px;
+    height: 50.76px;
+}
+
+.left-button:hover img {
+    transform: scale(1.1); 
+}
+
+.container p {
+    font-size: 25px; 
+    color: white;
+    text-align: left;
+    margin: 100px 0 10px 0px;
+}
+
+.info {
+    display: flex; 
+    flex-direction: column;
+    width: 403px; 
+    height: 192px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.info-1, .info-2 {
+    margin: 25px 15px 25px 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.info h3 {
+    color: #296265;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.info .time, .info .price, .info .title {
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.info .description, .info .start-date {
+    color: white;
+    font-weight: 150;
+    font-size: 16px;
+}
+
+.info .total {
+    color: white; 
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.method {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa các radio */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 18px 10px 18px 10px;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    appearance: none;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="radio"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+input[type="radio"]:checked::before {
+    opacity: 1;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.method label {
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.container .Thanh-toan {
+    margin-right: 0;
+}
+
+/* Nút Thanh toán */
+.Thanh-toan {
+    display: flex;
+    justify-content: flex-end; /* Căn phải */
+    width: 100%;
+    margin: 0 20px; /* Tạo khoảng cách hai bên */
+}
+
+.Thanhtoan {
+    width: 153px;
+    height: 46px;
+    border-radius: 10px;
+    background-color: #296265;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.Thanhtoan:hover {
+    background-color: #1DB954; /* Đổi màu khi hover */
+    transform: scale(1.05);
+}
+
+/* Responsive for tablet and mobile devices */
+@media (max-width: 768px) {
+    body {
+        height: auto; /* Để body mở rộng khi nội dung dài */
+        padding: 10px; /* Thêm khoảng cách bên trong */
+        flex-direction: column; /* Căn chỉnh nội dung theo chiều dọc */
+    }
+
+    .navigation-buttons {
+        top: 10px; /* Giảm khoảng cách với cạnh trên */
+        left: 10px; /* Giảm khoảng cách với cạnh trái */
+    }
+
+    .left-button img {
+        width: 40px; /* Giảm kích thước hình ảnh */
+        height: 40px;
+    }
+
+    .container p {
+        font-size: 20px; /* Giảm kích thước chữ */
+        margin: 50px 0 10px; /* Tạo khoảng cách hợp lý */
+        text-align: center; /* Căn giữa chữ */
+    }
+
+    .info {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        height: auto; /* Để chiều cao tự động */
+        padding: 10px; /* Giảm padding */
+        margin-bottom: 15px; /* Giảm khoảng cách giữa các info */
+    }
+
+    .info h3 {
+        font-size: 20px; /* Giảm kích thước tiêu đề */
+    }
+
+    .info .time, .info .price, .info .title, 
+    .info .description, .info .start-date, 
+    .info .total {
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
+    .method {
+        width: 100%;
+        padding: 10px; /* Giảm padding */
+        gap: 10px; /* Giảm khoảng cách giữa các radio */
+        margin-bottom: 15px; /* Giảm khoảng cách phía dưới */
+    }
+
+    .radio-item {
+        gap: 10px; /* Giảm khoảng cách giữa radio và label */
+    }
+
+    input[type="radio"] {
+        width: 16px; /* Giảm kích thước radio */
+        height: 16px;
+    }
+
+    input[type="radio"]::before {
+        width: 8px; /* Giảm kích thước dấu check */
+        height: 8px;
+    }
+
+    .icon {
+        width: 20px; /* Giảm kích thước icon */
+        height: 20px;
+    }
+
+    .method label {
+        font-size: 16px; /* Giảm kích thước chữ */
+    }
+
+    .Thanh-toan {
+        margin: 0; /* Xóa khoảng cách bên phải */
+        justify-content: center; /* Căn giữa nút */
+    }
+
+    .Thanhtoan {
+        width: 100%; /* Nút chiếm toàn bộ chiều rộng */
+        height: 40px; /* Giảm chiều cao nút */
+        font-size: 18px; /* Giảm kích thước chữ */
+    }
+}
+
+/* Responsive for smaller mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .info h3 {
+        font-size: 18px; /* Giảm kích thước tiêu đề hơn nữa */
+    }
+
+    .info .time, .info .price, .info .title, 
+    .info .description, .info .start-date, 
+    .info .total {
+        font-size: 12px; /* Giảm kích thước chữ thêm cho điện thoại nhỏ */
+    }
+
+    .method label {
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
+    .Thanhtoan {
+        font-size: 16px; /* Giảm kích thước chữ */
+        border-radius: 8px; /* Làm nút bo tròn hơn */
+    }
+}

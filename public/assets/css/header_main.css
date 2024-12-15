@@ -1,0 +1,218 @@
+header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 55px;
+    position: fixed;
+    width: 90%;
+    max-width: 1150px;
+    height: 65px;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    z-index: 1000;
+}
+
+header .controlbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    gap: 20px;
+    background-color: transparent;
+}
+
+header .searching {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    height: 44px;
+}
+
+header .searching .home,
+header .searching .voice-searching,
+header .general .account {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 40px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iconify-icon {
+    font-size: 28px;
+    color: #fff;
+}
+
+header .searching .input-wrapper {
+    flex: 1;
+    max-width: 340px; /* Kích thước tối đa trên màn hình lớn */
+    height: 44px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    transition: width 0.3s ease; /* Hiệu ứng chuyển đổi mượt */
+}
+
+header .searching .input-wrapper input {
+    flex: 1;
+    height: 100%;
+    padding: 0 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+header .searching .input-wrapper img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+header .general {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Responsive cho Tablet (<= 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 20px; /* Điều chỉnh padding cho vừa không gian */
+        flex-direction: column; /* Chuyển sang dạng cột khi thu nhỏ */
+        align-items: center; /* Căn giữa các phần tử */
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    header .controlbar {
+        justify-content: center;
+        gap: 10px;
+        width: 100%; /* Đảm bảo chiều rộng các phần tử là 100% */
+    }
+
+    header .searching {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        margin-top: 10px;
+    }
+
+    header .searching .input-wrapper {
+        width: 100%; /* Cho phép thanh tìm kiếm chiếm toàn bộ không gian */
+        padding: 0 10px;
+    }
+
+    header .searching .input-wrapper input {
+        font-size: 14px; /* Điều chỉnh kích thước font cho phù hợp */
+    }
+
+    header .general {
+        width: 100%;
+        justify-content: center; /* Căn giữa các biểu tượng */
+        margin-top: 10px;
+    }
+
+    iconify-icon {
+        font-size: 24px;
+    }
+}
+
+/* Mobile (<= 400px) */
+@media screen and (max-width: 400px) {
+    /* Điều chỉnh chiều rộng và padding của header */
+    header {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px; /* Thêm khoảng cách giữa các phần tử */
+    }
+
+    /* Điều chỉnh kích thước logo */
+    .logo {
+        width: 120px; /* Giảm kích thước logo */
+    }
+
+    /* Các phần tử điều hướng (menu) */
+    .menu {
+        display: none; /* Ẩn menu theo dạng hàng ngang */
+    }
+
+    /* Thêm một nút burger để mở menu */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px; /* Tăng kích thước icon */
+    }
+
+    .menu.active {
+        display: block; /* Khi menu toggle, hiển thị menu */
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    /* Các liên kết trong menu */
+    .menu a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    /* Điều chỉnh khoảng cách giữa các mục trong header */
+    .header-items {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* Điều chỉnh vị trí các icon trong header */
+    .header-icons {
+        display: none; /* Ẩn các icon */
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 10px 0;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Điều chỉnh button đăng xuất */
+    .logout-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    header img {
+        display: none; /* Ẩn hình ảnh trong header */
+    }
+}

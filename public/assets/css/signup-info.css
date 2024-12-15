@@ -1,0 +1,401 @@
+body {
+    background-color: #000;
+    background-image: url('/MVC/View/img/img_bg_1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 1326px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+.navigation-buttons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 0;
+}
+
+.left-button,
+.right-button {
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.left-button img,
+.right-button img {
+    filter: brightness(0) invert(1);
+    width: 50.74px;
+    height: 50.76px;
+}
+
+.left-button:hover img,
+.right-button:hover img {
+    transform: scale(1.1); 
+}
+
+.container-1 {
+    width: 1040px;
+    height: 101px;
+    margin-bottom: 100px;
+    position: absolute;
+    top: 75px;
+    text-align: center;
+}
+
+.container-1-h2 {
+    font-weight: 800;
+    font-size: 92px;
+}
+
+.white-text {
+    color: white;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #296265 0%, #344A5C 38%, #3F2F52 70%, #471C4B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container-2 {
+    width: 712px;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: left;
+    position: absolute;
+    top: 391px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-2-top, .container-2-bottom {
+    width: 552px;
+    margin: 5px auto;
+}
+
+label{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    display: block;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 552px;
+    height: 60px;
+    background-color: transparent;
+    color: #ffff;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    padding: 10px 10px 10px 10px;
+    font-size: 18px;
+}
+
+button.sign-up {
+    width: 552px;
+    height: 80px;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+    color: white;
+
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(to right, #296265 0%, #344A5C 38%, #3F2F52 70%, #471C4B 100%);
+}
+
+button:hover {
+    background-color: #3F2F52;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h2{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.input-container{
+    position: relative;
+    width: 552px;
+}
+
+input[type="radio"]{
+    width: 30px; 
+    height: 30px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    cursor: pointer;
+    background-color: transparent;
+    appearance: none;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 0;
+}
+
+input[type="radio"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1); /* Dấu chọn */
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+input[type="radio"]:checked::before {
+    opacity: 1; /* Hiển thị khi được chọn */
+}
+
+p{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    width: 552px; 
+    height: 48px; 
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.container-2-center {
+    width: 575px;;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.container-2-center div {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-2-center label {
+    color: white; 
+    font-family: 'Inter', sans-serif; 
+    font-size: 20px; 
+    margin-left: 7px; 
+    margin-right: 75px;
+    cursor: pointer; 
+}
+
+
+.container-2-center label:hover {
+    color: #296265; 
+    text-decoration: underline; 
+}
+
+input[type="date"] {
+    width: 552px;
+    height: 60px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    -webkit-appearance: none; /* Xóa bỏ giao diện mặc định của trình duyệt */
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* Đặt chiều rộng cho biểu tượng lịch */
+    height: 30px; /* Đặt chiều cao cho biểu tượng lịch */
+    cursor: pointer;
+    filter: invert(1); /* Điều chỉnh màu sắc nếu cần */
+}
+
+input[type="date"]::-moz-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #ff4c4c; /* Màu đỏ nổi bật */
+    font-weight: bold;
+    text-align: center;
+    margin-left: 70px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ================= Tablet (iPad 768x1024) ================= */
+@media (max-width: 768px) and (max-height: 1024px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: auto; 
+    }
+
+    .container-1 {
+        width: 90%; 
+    }
+
+    .container-1-h2 {
+        font-size: 60px;
+    }
+
+    .container-2 {
+        width: 85%; 
+        padding: 20px;
+        max-height: 800px; 
+        overflow-y: auto; 
+        top: 300px;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+        width: 500px; 
+        font-size: 16px; 
+    }
+
+    .sign-up {
+        font-size: 20px; 
+        height: 70px;
+    }
+}
+
+/* ================= Tablet (iPhone 12 Pro 400x900) ================= */
+@media (max-width: 400px) and (max-height: 900px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: auto; 
+    }
+
+    .container-1 {
+        width: 90%; 
+    }
+
+    .container-1-h2 {
+        font-size: 45px; 
+    }
+
+    .container-2 {
+        width: 350px; 
+        padding: 10px;
+        max-height: 700px; 
+        overflow-y: auto; 
+    }
+
+    .container-2-top {
+        width: 330px;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+        width: 300px;
+        height: 60px;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .container-2-center {
+        width: 100%;
+        max-width: 330px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .container-2-center div {
+        display: flex; 
+        align-items: center;
+        gap: 10px;
+    }
+
+    .container-2-center label {
+        font-size: 20px;
+        margin: 0 10px 0 0px;
+    }
+
+    input[type="radio"] {
+        width: 24px; /* Kích thước nhỏ hơn cho mobile */
+        height: 24px;
+        border: 2px solid rgba(255, 255, 255, 0.8); 
+        cursor: pointer;
+        background-color: transparent;
+        appearance: none; /* Xóa giao diện mặc định */
+        border-radius: 50%;
+        position: relative;
+        margin-right: 5px; /* Khoảng cách giữa radio và label */
+    }  
+    
+    input[type="radio"]::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px; /* Kích thước dấu chọn nhỏ hơn */
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.8); /* Màu dấu chọn */
+        opacity: 0; /* Ẩn mặc định */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .container-2-bottom{
+        width: 330px;
+    }
+
+    .sign-up {
+        font-size: 14px; 
+        height: 50px;
+        max-width: 300px;
+        margin-left: 10px;
+    }   
+
+    p {
+        width: 330px;
+    }
+}
+
+

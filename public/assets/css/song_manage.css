@@ -1,0 +1,621 @@
+body {
+    background-image: url('/web_nghe_nhac/public/assets/img/image-bg.png');
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 780px;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    color: #fff;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền tối với độ trong suốt */
+    z-index: 999; /* Đảm bảo lớp phủ nằm dưới popup */
+    display: none; /* Ẩn lớp phủ khi không cần thiết */
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+#main {
+    box-sizing: border-box;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0 24px 24px;
+    gap: 30px;
+    width: 100%;
+    max-width: 850px;
+    top: 118px;
+    left: 380px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px 10px 10px 20px;
+    z-index: 1;
+}
+
+#main-head {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+#search-bar {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+
+    width: 500px;
+    height: 44px;
+}
+
+#search-typing {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 9px 20px;
+    gap: 10px;
+
+    width: 340px;
+    height: 44px;
+
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+}
+
+#search-typing input[type=text] {
+    width: 280px;
+
+    background-color: transparent;
+    color: white;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 20px;
+
+    width: 120px;
+    height: 42px;
+
+    background: #296265;
+    border-radius: 61px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width:100%;
+    max-width: 800px;
+}
+
+#songs-title {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    width:100%;
+    max-width: 800px;
+    height: 24px;
+    color: white;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #CCCCCC;
+}
+
+#songs-title span:nth-child(1) {
+    width: 40px;
+    margin-left: 68px;
+}
+
+#songs-title span:nth-child(2) {
+    width: 500px;
+}
+
+#songs-list {
+    height: 100%;
+    max-height: 1000px;
+    width:100%;
+    max-width: 800px;
+    margin-top: 12px;
+    overflow-y: auto;
+
+    scrollbar-width: thin; /* Thanh cuộn nhỏ */
+    scrollbar-color: #296265 transparent; /* Màu của thanh cuộn và khung */
+}
+
+#songs-list div {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    padding: 0 12px;
+    margin-bottom: 12px;
+}
+
+#songs-list input[type=checkbox] {
+    box-sizing: border-box;
+
+    width: 20px;
+    height: 20px;
+
+    border: 3px solid #FFFFFF;
+    border-radius: 2px;
+    background-color: transparent;
+    appearance: none;
+    
+}
+
+#songs-list input[type=checkbox]:checked {
+    content: '✔';
+    background-color:slategray;
+}
+
+#songs-list input[type=checkbox]:checked::before
+{
+    content: '';
+    display: block;
+    color: white; /* Màu của dấu kiểm */
+    width: 9px; /* Kích thước của hình vuông nhỏ */
+    height: 9px;
+    background-color: white;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#songs-list .stt /*Số thứ tự*/ {
+    width: 50px;
+    margin-left: 28px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+}
+#songs-list img {
+    margin-left: 25px;
+    margin-right: 20px;
+    width: 63px;
+    height: 63px;
+    border-radius: 4px;
+}
+
+#songs-list .title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+
+    width: 430px;
+    height: 56px;
+}
+
+#songs-list .title .tenBH {
+    width: 430px;
+    height: 26px;
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 110%;
+
+    display: flex;
+    align-items: center;
+}
+
+#songs-list .title .tenNS {
+    width: 430px;
+    height: 24px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+    display: flex;
+    align-items: center;
+
+    color: #CCCCCC;
+}
+
+#songs-list .type {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+
+    color: #FFFFFF;
+    margin-right: auto;
+    margin-left: 24px; 
+}
+
+/*Thêm bài hát*/
+#them-bh-popup, /*Cập nhật bài hát*/
+#cap-nhat-bh-popup {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 350px;
+    height: 675px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    
+    flex-direction: column;
+    background: #000000;
+    z-index: 1000;
+}
+
+#them-bh-return, #cap-nhat-return {
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 13px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+#popup-title, #cap-nhat-popup-title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+
+    width: 325px;
+    height: 700px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+}
+#choose-image, #cap-nhat-choose-image{
+    display: flex;
+    background-color: transparent;
+    border: transparent !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 103px;
+    height: 103px;
+    cursor: pointer;
+    align-items: center; /* Căn giữa nội dung theo trục dọc */
+    justify-content: center; /* Căn giữa nội dung theo trục ngang */
+    overflow: hidden; /* Ẩn các phần thừa của ảnh */
+}
+#choose-image img, #cap-nhat-choose-image img {
+    box-sizing: border-box;
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#form p, #cap-nhat-bh-form p {
+    margin: 0px 0px 3px 0px;
+    padding: 15px 0 5px;
+}
+input[name=name-bh], input[name=name-artist], #select-theloai, textarea[name=lyrics],
+#cap-nhat-ten-bai-hat, #cap-nhat-ten-nghe-sy, #cap-nhat-select-theloai, textarea[name=cap-nhat-lyrics] {
+    box-sizing: border-box;
+    padding: 5px 20px;
+    width: 300px;
+    height: 36px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+}
+
+#select-theloai option, #cap-nhat-select-theloai option {
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+}
+#select-theloai option:hover, #cap-nhat-select-theloai option:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+#lyrics, #cap-nhat-lyrics {
+    width: 324px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Arial', 'extra bold';
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+textarea[name=lyrics], textarea[name=cap-nhat-lyrics] {
+    height: 92px;
+    padding: 10px;
+    resize: none; /* Loại bỏ khả năng thay đổi kích thước */
+    overflow-wrap: break-word; /* Cho phép văn bản tự động xuống dòng */
+    word-wrap: break-word; /* Hỗ trợ trình duyệt cũ */
+    text-align: left; /* Căn văn bản sang trái */
+    vertical-align: top; /* Căn văn bản theo chiều dọc */
+    line-height: 1.4; /* Khoảng cách giữa các dòng */
+    font-family: 'Arial', sans-serif;
+}
+input[type=submit] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 24px;
+
+    width: 87px;
+    height: 36px;
+
+    background: #296265;
+    border-radius: 5px;
+    border: none;
+
+    margin-top: 12px;
+    margin-right: 24px;;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+#cap-nhat-submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 24px;
+
+    width: 120px;
+    height: 36px;
+
+    background: #296265;
+    border-radius: 5px;
+    border: none;
+
+    margin-top: 12px;
+    margin-right: 24px;;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+input[type=submit]:active, #cap-nhat-submit:active, #upload-bai-hat-button:active, #cap-nhat-upload-bh:active {
+    transform: scale(0.9);
+}
+#upload-bai-hat-button, #cap-nhat-upload-bh {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 24px;
+    gap: 10px;
+
+    width: fit-content;
+    height: 36px;
+
+    background: #296265;
+    border-radius: 5px;
+    border: none;
+
+    margin-top: 12px;
+    margin-right: auto;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+#upload-bai-hat-button:active {
+    transform: scale(0.9);
+}
+
+#cap-nhat-name-bh {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 325px;
+    height: 86px;
+}
+
+/*form xóa bài hát*/
+#xoa-bh-admin {
+    position: absolute;
+    background-color: #000000;
+    box-sizing: border-box;
+    width: 440px;
+    height: 170px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    align-items: center;
+    display: none; /*Ẩn hiện form*/
+    z-index: 1000;
+
+    transition: display 0.5s ease; /* Thêm hiệu ứng chuyển động */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 110%;
+    align-items: center;
+    flex-direction: column;
+
+    color: #FFFFFF;
+    padding: 15px 20px;
+}
+
+#div-form-xoa-bh-admin {
+    display: flex;
+    width: 100%;
+    height: 36px;
+}
+
+#form-xoa-bh-admin {
+    width: 100px;
+    height: auto;
+    margin-right: 50px;
+    margin-left: auto;
+}
+
+#xoa-bh-submit-admin {
+    border: none;
+    padding: 6px 24px;
+
+    width: 100px;
+    height: 36px;
+
+    background: #296265;
+    border-radius: 5px;
+
+    margin-top: 0px;
+    margin-right: 50px;
+    margin-left: auto;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: scale 0.5ms;
+}
+
+#cancel-button-admin {
+    border: none;
+    padding: 6px 24px;
+
+    width: 100px;
+    height: 36px;
+
+    background: #296265;
+    border-radius: 5px;
+
+    justify-content: center;
+
+    margin-left: 50px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: scale 1ms;
+}
+
+#xoa-bh-submit-admin:active, #cancel-button-admin:active {
+    transform: scale(0.95);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    #main {
+        left: 180px;
+    }
+    
+    #songs-list .title, #songs-list .title .tenNS, #songs-list .title .tenBH {
+        width: 400px;
+    }
+    #songs-title span:nth-child(2) {
+        width: 470px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #main {
+        left: 90px;
+    }
+    
+    #songs-list .title, #songs-list .title .tenBH {
+        max-width: 400px;
+        width: 100%;
+        font-size: 20px;
+    }
+    #songs-list .title .tenNS{
+        font-size: 14px;
+    }
+    #songs-title span:nth-child(2) {
+        width: 400px;
+    }
+    #search-bar {
+        gap: 10px;
+    }
+
+    #search-typing {
+        padding: 8px;
+        width: 270px;
+    }
+
+    #search-button {
+        font-size: 12px; /* Giảm kích thước chữ */
+
+    }
+    #songs-list input[type=checkbox] {
+        width: 15px !important;
+        height: 15px;
+    }
+}

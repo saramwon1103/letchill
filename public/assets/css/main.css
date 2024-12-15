@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    color: #fff;
+}
+
+* {
+    
+    font-family: "Inter", "Times New Roman";
+    color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+html,
+body {
+    scroll-behavior: smooth;
+    height: 100%;
+
+}
+
+body:active {
+    cursor: grabbing;
+    /* Đổi biểu tượng con trỏ khi đang kéo */
+}
+
+img,
+.logo,
+div,
+iconify-icon,
+span,
+ul,
+li,
+h3,
+h4 {
+    background-color: transparent;
+    /* Đảm bảo nền trong suốt */
+}
+
+h3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 110%;
+}
+
+h4 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 110%;
+    margin: 0;
+}
+
+.ui_semibold {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.ui_regular {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.p1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+}
+
+.p2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.p3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+}
+
+.op_75 {
+    color: rgba(255, 255, 255, 0.75);
+
+}
+
+.op_50 {
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+.op_25 {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.scrollable {
+    width: auto;
+    height: auto;
+    border: 1px solid #ccc;
+    overflow: overlay;
+}
+
+/* Định dạng thanh cuộn */
+/* Toàn bộ thanh cuộn */
+.scrollable::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+}
+
+/* Hiển thị thanh cuộn khi người dùng cuộn */
+/* .scrollable:hover::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+} */
+
+/* Track của thanh cuộn (đường rãnh) */
+.scrollable::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Màu nền của track */
+    height: 200px;
+    width: 4px;
+    height: 4px;
+}
+
+/* Thumb của thanh cuộn (thanh di chuyển) */
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Màu của thanh di chuyển */
+    border-radius: 6px;
+    /* Bo tròn các góc */
+}
+
+/* Khi hover vào thanh di chuyển */
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Màu khi hover */
+}
+
+.scrollable:active {
+    cursor: grabbing;
+    /* Thay đổi con trỏ chuột khi đang kéo */
+}
+
+
+/* ------------------------------ */
+
+.mainLight {
+    position: fixed;
+    width: 1030px;
+    height: 651px;
+    left: 318px;
+    top: 200px;
+    border-radius: 50%/50%;
+
+    background: conic-gradient(from 24.89deg at 50% 50%, #3A2145 -6.85deg, #296265 31.06deg, #000000 109.37deg, #000000 139.56deg, #233949 214.7deg, #000000 244.08deg, #3A2145 353.15deg, #296265 391.06deg);
+    filter: blur(40px);
+}
+
+/* HEADER */
+
+
+/* Main */
+
+main {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    top: 120px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0);
+}
+
+.mainSpace {
+    display: flex;
+    position: fixed;
+    height: 70%;
+    width: 100%;
+    left: 0;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 500;
+}
+
+.mainSpace .leftBar,
+.mainSpace .centerSpace,
+.mainSpace .rightBar {
+    background: rgba(255, 255, 255, 0.10);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mainSpace .leftBar {
+    margin-left: 30px;
+    width: 331px;
+}
+
+.mainSpace .leftBar,
+.mainSpace .rightBar {
+    flex: 1;
+}
+
+
+
+.mainSpace .rightBar {
+    margin-right: 30px;
+}
+
+.mainSpace .centerSpace {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow: auto;
+}
+
+/* Listening  */
+
+.listeningSpace {
+    background: #000;
+    height: 92px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+

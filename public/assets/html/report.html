@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu</title>
+    <link rel="stylesheet" href="../css/report.css">
+    
+    <link rel="stylesheet" href="../css/admin_left_side.css">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+</head>
+
+<body>
+    <img src="../img/admin-bg.png">
+    <li class="left-li">
+        <a href="#" class="left-menu">Quản lý bài hát</a>
+        <ul class="left-submenu">
+            <li><a href="#"><iconify-icon icon="ic:round-add-circle"></iconify-icon>Thêm bài hát</a></li>
+            <li><a href="#"><iconify-icon icon="solar:pen-bold"></iconify-icon>Cập nhật bài hát</a></li>
+            <li><a href="#"><iconify-icon icon="ic:round-delete"></iconify-icon>Xóa bài hát</a></li>
+        </ul>
+        <a href="#" class="left-menu">Quản lý tài khoản</a>
+        <ul class="left-submenu">
+            <li><a href="#"><iconify-icon icon="ic:round-add-circle"></iconify-icon>Thêm tài khoản</a></li>
+            <li><a href="#"><iconify-icon icon="solar:pen-bold"></iconify-icon>Cập nhật tài khoản</a></li>
+            <li><a href="#"><iconify-icon icon="ic:round-delete"></iconify-icon>Xóa tài khoản</a></li>
+        </ul>
+        <a href="#" class="left-menu"><iconify-icon icon="carbon:report"></iconify-icon>Báo cáo</a>
+    </li>
+    <div class="report">
+        <div class="search-container">
+            <label for="date">Từ móc</label>
+            <input type="month" id="start-month" name="month-year" value="Từ móc">
+
+            <label for="date">Đến móc</label>
+            <input type="month" id="end-month" name="month-year">
+
+            <label for="package">Gói:</label>
+            <select id="package">
+                <option value="mini">Mini</option>
+                <option value="individual">Individual</option>
+                <option value="student">Student</option>
+            </select>
+
+            <button id="search-btn">Tra cứu</button>
+        </div>
+        <button id="export-btn">Xuất</button>
+
+        <div class="result-table">
+            <table id="result">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" name="all" value=""></th>
+                        <th>Tên gói</th>
+                        <th>Mốc thời gian</th>
+                        <th>Số người đăng ký</th>
+                        <th>Doanh thu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" name="row" value=""></td>
+                        <td>Mini</td>
+                        <td>Từ 01/01/2020 đến 31/12/2020</td>
+                        <td>100</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="row" value=""></td>
+                        <td>Individual</td>
+                        <td>Từ 01/01/2020 đến 31/12/2020</td>
+                        <td>200</td>
+                        <td>10000</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="row" value=""></td>
+                        <td>Mini</td>
+                        <td>Từ 01/01/2020 đến 31/12/2020</td>
+                        <td>100</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="row" value=""></td>
+                        <td>Student</td>
+                        <td>Từ 01/01/2020 đến 31/12/2020</td>
+                        <td>200</td>
+                        <td>10000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="total">
+            <h3>Tổng doanh thu:</h3>
+            <h3>256.234.231 VND</h3>
+        </div>
+
+    </div>
+
+
+    <!-- <script>
+        document.getElementById('search-btn').addEventListener('click', function() {
+            const date = document.getElementById('date').value;
+            const package = document.getElementById('package').value;
+        
+            if (date && package) {
+                // Example: Add rows based on search (this would be dynamic based on real data)
+                const tableBody = document.querySelector('#result tbody');
+                tableBody.innerHTML = ''; // Clear previous results
+        
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${package}</td><td>${date}</td><td>100</td><td>5000</td>`;
+                tableBody.appendChild(row);
+        
+                // Show result table and export button
+                document.querySelector('.result-table').style.display = 'block';
+                document.getElementById('export-btn').style.display = 'inline-block';
+            } else {
+                alert('Please select date and package.');
+            }
+        });
+        
+        // Export to Excel functionality
+        document.getElementById('export-btn').addEventListener('click', function() {
+            const table = document.getElementById('result');
+            const workbook = XLSX.utils.table_to_book(table, {sheet: 'Results'});
+            XLSX.writeFile(workbook, 'results.xlsx');
+        });
+        
+    </script> -->
+</body>
+
+</html>

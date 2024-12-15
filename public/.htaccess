@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Ngoại trừ các tệp có đuôi .css, .js, .png, .jpg, .jpeg, .gif, .ico khỏi chuyển hướng
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico)$ [NC]
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
